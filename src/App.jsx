@@ -13,6 +13,7 @@ function App() {
         sources: "Sources",
         about: "About",
       },
+
       hero: {
         eyebrow: "Operational Intelligence • Defense Technology • Modern Warfare",
         title: "War Affairs Today",
@@ -23,16 +24,19 @@ function App() {
         radarTitle: "Live Intelligence Monitor",
         radarText: "Tracking conflicts, defense technology, and operational trends",
       },
+
       stats: [
         ["24/7", "Monitoring mindset"],
         ["OSINT", "Open-source analysis"],
         ["AI", "Technology watch"],
         ["EW", "Electronic warfare focus"],
       ],
+
       core: {
         eyebrow: "Core Areas",
         title: "Intelligence and Technology Focus",
       },
+
       cards: [
         {
           title: "Operational Intelligence",
@@ -60,6 +64,7 @@ function App() {
           icon: "🗞️",
         },
       ],
+
       conflicts: {
         eyebrow: "Armed Conflict News",
         title: "Updates on Ongoing Conflicts",
@@ -81,12 +86,18 @@ function App() {
             text: "Understand how local events may affect regional security, deterrence, alliances, logistics, and strategic decision-making.",
           },
           {
+            tag: "International Law",
+            title: "International Law and Armed Conflict",
+            text: "Analyze the legal dimensions of armed conflicts, including international humanitarian law, rules of engagement, civilian protection, proportionality, accountability, and the use of emerging technologies in warfare.",
+          },
+          {
             tag: "Technology in War",
             title: "Weapons and Systems",
-            text: "Observe the role of drones, missiles, air defense, electronic warfare, cyber operations, sensors, and autonomous systems in current conflicts.",
+            text: "Observe the role of drones, missiles, air defense, electronic warfare, cyber operations, sensors, acoustic systems, and autonomous systems in current conflicts.",
           },
         ],
       },
+
       technology: {
         eyebrow: "Technology Watch",
         title: "Emerging Defense Technologies",
@@ -111,8 +122,19 @@ function App() {
             title: "Electronic Warfare",
             text: "Jamming, spoofing, spectrum dominance, SIGINT, cyber-electromagnetic activities, and electromagnetic operations.",
           },
+          {
+            icon: "🎧",
+            title: "Acoustic Warfare",
+            text: "Underwater acoustics, sonar systems, passive and active detection, acoustic intelligence, anti-submarine warfare, and maritime acoustic sensing.",
+          },
+          {
+            icon: "🛡️",
+            title: "Cyber Warfare",
+            text: "Cyber operations, network defense, offensive cyber capabilities, critical infrastructure protection, and the cyber dimension of modern conflict.",
+          },
         ],
       },
+
       pipeline: {
         eyebrow: "Analysis Pipeline",
         title: "From Events to Operational Insight",
@@ -139,14 +161,16 @@ function App() {
           },
         ],
       },
+
       sources: {
         eyebrow: "Sources",
         title: "Useful Defense and Intelligence Links",
       },
+
       about: {
         eyebrow: "About",
         title: "Modern conflict explained through intelligence and technology.",
-        text: "War Affairs Today is designed as a visual briefing hub for operational intelligence, defense innovation, armed conflict news, and contemporary warfare analysis, with special attention to drones, sensors, radar, electronic warfare, artificial intelligence, and autonomous systems.",
+        text: "War Affairs Today is designed as a visual briefing hub for operational intelligence, defense innovation, armed conflict news, and contemporary warfare analysis, with special attention to drones, sensors, radar, electronic warfare, acoustic warfare, cyber warfare, artificial intelligence, autonomous systems, and the legal dimensions of armed conflict.",
       },
     },
 
@@ -158,6 +182,7 @@ function App() {
         sources: "Fontes",
         about: "Sobre",
       },
+
       hero: {
         eyebrow: "Inteligência Operacional • Tecnologia de Defesa • Guerra Moderna",
         title: "War Affairs Today",
@@ -168,16 +193,19 @@ function App() {
         radarTitle: "Monitor de Inteligência",
         radarText: "Acompanhando conflitos, tecnologia de defesa e tendências operacionais",
       },
+
       stats: [
         ["24/7", "Mentalidade de monitoramento"],
         ["OSINT", "Análise de fontes abertas"],
         ["IA", "Observação tecnológica"],
         ["GE", "Foco em guerra eletrônica"],
       ],
+
       core: {
         eyebrow: "Áreas Centrais",
         title: "Foco em Inteligência e Tecnologia",
       },
+
       cards: [
         {
           title: "Inteligência Operacional",
@@ -205,6 +233,7 @@ function App() {
           icon: "🗞️",
         },
       ],
+
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
         title: "Atualizações sobre Conflitos em Andamento",
@@ -226,12 +255,18 @@ function App() {
             text: "Entenda como eventos locais podem afetar a segurança regional, a dissuasão, alianças, logística e processos de decisão estratégica.",
           },
           {
+            tag: "Direito Internacional",
+            title: "Direito Internacional e Conflitos Armados",
+            text: "Analise as dimensões jurídicas dos conflitos armados, incluindo Direito Internacional Humanitário, regras de engajamento, proteção de civis, proporcionalidade, responsabilização e uso de tecnologias emergentes na guerra.",
+          },
+          {
             tag: "Tecnologia na Guerra",
             title: "Armas e Sistemas",
-            text: "Observe o papel de drones, mísseis, defesa aérea, guerra eletrônica, operações cibernéticas, sensores e sistemas autônomos nos conflitos atuais.",
+            text: "Observe o papel de drones, mísseis, defesa aérea, guerra eletrônica, operações cibernéticas, sensores, sistemas acústicos e sistemas autônomos nos conflitos atuais.",
           },
         ],
       },
+
       technology: {
         eyebrow: "Observatório Tecnológico",
         title: "Tecnologias Emergentes de Defesa",
@@ -256,8 +291,19 @@ function App() {
             title: "Guerra Eletrônica",
             text: "Jamming, spoofing, domínio do espectro, SIGINT, atividades cibernético-eletromagnéticas e operações no espectro eletromagnético.",
           },
+          {
+            icon: "🎧",
+            title: "Guerra Acústica",
+            text: "Acústica submarina, sistemas sonar, detecção passiva e ativa, inteligência acústica, guerra antissubmarino e sensoriamento acústico marítimo.",
+          },
+          {
+            icon: "🛡️",
+            title: "Guerra Cibernética",
+            text: "Operações cibernéticas, defesa de redes, capacidades ofensivas no ciberespaço, proteção de infraestruturas críticas e dimensão cibernética dos conflitos modernos.",
+          },
         ],
       },
+
       pipeline: {
         eyebrow: "Fluxo de Análise",
         title: "Dos Eventos ao Insight Operacional",
@@ -284,14 +330,16 @@ function App() {
           },
         ],
       },
+
       sources: {
         eyebrow: "Fontes",
         title: "Links Úteis de Defesa e Inteligência",
       },
+
       about: {
         eyebrow: "Sobre",
         title: "Conflitos modernos explicados por meio de inteligência e tecnologia.",
-        text: "War Affairs Today foi concebido como um hub visual de briefings para inteligência operacional, inovação em defesa, notícias sobre conflitos armados e análise da guerra contemporânea, com atenção especial a drones, sensores, radar, guerra eletrônica, inteligência artificial e sistemas autônomos.",
+        text: "War Affairs Today foi concebido como um hub visual de briefings para inteligência operacional, inovação em defesa, notícias sobre conflitos armados e análise da guerra contemporânea, com atenção especial a drones, sensores, radar, guerra eletrônica, guerra acústica, guerra cibernética, inteligência artificial, sistemas autônomos e dimensões jurídicas dos conflitos armados.",
       },
     },
   };
@@ -299,12 +347,34 @@ function App() {
   const t = content[lang];
 
   const links = [
-    { label: "NATO", url: "https://www.nato.int/" },
-    { label: "U.S. Department of Defense", url: "https://www.defense.gov/" },
-    { label: "IISS", url: "https://www.iiss.org/" },
-    { label: "Janes", url: "https://www.janes.com/" },
-    { label: "CSIS", url: "https://www.csis.org/" },
-    { label: "Institute for the Study of War", url: "https://www.understandingwar.org/" },
+    {
+      label: lang === "en" ? "My GitHub Projects" : "Meus Projetos no GitHub",
+      url: "https://github.com/albuca09?tab=repositories",
+    },
+    {
+      label: "NATO",
+      url: "https://www.nato.int/",
+    },
+    {
+      label: "U.S. Department of Defense",
+      url: "https://www.defense.gov/",
+    },
+    {
+      label: "IISS",
+      url: "https://www.iiss.org/",
+    },
+    {
+      label: "Janes",
+      url: "https://www.janes.com/",
+    },
+    {
+      label: "CSIS",
+      url: "https://www.csis.org/",
+    },
+    {
+      label: "Institute for the Study of War",
+      url: "https://www.understandingwar.org/",
+    },
   ];
 
   return (
@@ -394,7 +464,11 @@ function App() {
         <div className="conflict-grid">
           {t.conflicts.items.map((item) => (
             <article
-              className={item.featured ? "conflict-card featured-conflict" : "conflict-card"}
+              className={
+                item.featured
+                  ? "conflict-card featured-conflict"
+                  : "conflict-card"
+              }
               key={item.title}
             >
               <span className="tag">{item.tag}</span>
@@ -447,7 +521,12 @@ function App() {
 
         <div className="link-grid">
           {links.map((link) => (
-            <a href={link.url} target="_blank" rel="noopener noreferrer" key={link.label}>
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              key={link.label}
+            >
               {link.label}
             </a>
           ))}
