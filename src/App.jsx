@@ -1,8 +1,16 @@
 import { useState } from "react";
 import "./App.css";
 
+const bulletinReferences = [
+  "Financial Times — 25.05.2026",
+  "The Guardian — 25.05.2026",
+  "The New York Times — 25.05.2026",
+  "The Times — 25.05.2026",
+  "The Washington Post — 25.05.2026",
+];
+
 function App() {
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("pt");
 
   const content = {
     en: {
@@ -68,32 +76,66 @@ function App() {
       conflicts: {
         eyebrow: "Armed Conflict News",
         title: "Updates on Ongoing Conflicts",
+        bulletin: "BULLETIN No. 01 — MAY 25, 2026",
+        referencesLabel: "References",
         items: [
           {
             tag: "Conflict Monitoring",
             title: "Battlefield Developments",
+            references: bulletinReferences,
             text: "Follow major developments in ongoing armed conflicts, including military operations, territorial changes, escalation patterns, ceasefire negotiations, and battlefield-relevant events.",
             featured: true,
+            details: [
+              "U.S.–Iran Agreement: the United States and Iran reached the framework of a memorandum of understanding for a 60-day ceasefire intended to end Operation Epic Fury. The agreement includes reopening the Strait of Hormuz without Iranian tolls and the eventual lifting of the American naval blockade. However, discussions on dismantling Iranian nuclear fuel and ballistic missiles were postponed to future negotiations.",
+              "Russian Offensive in Ukraine: Russia conducted one of its largest recent overnight bombardments against Ukraine, launching missiles and drones, with Kyiv as a main target and damage to civilian infrastructure and residential areas.",
+              "Lebanon–Israel War: despite a formal ceasefire agreement, deadly fighting continues in Lebanon, including recent Israeli airstrikes. Israeli officials also stated that arrangements with Iran would not restrict freedom of action against Hezbollah forces.",
+              "Other Violence Hotspots: attacks were also reported in Pakistan and Mali, including an attack attributed to the Balochistan Liberation Army and operations by JNIM, an Al-Qaeda-affiliated group.",
+            ],
           },
           {
             tag: "Operational View",
             title: "Military Operations",
+            references: bulletinReferences,
             text: "Track campaigns, force movements, strikes, defensive actions, maritime operations, air activity, and changes in operational tempo.",
+            details: [
+              "Ukrainian Air Defense Performance: during the latest Russian mass attack, Ukrainian air defenses intercepted most drones and cruise missiles but faced greater difficulty against faster ballistic missiles.",
+              "Middle East Operations: U.S. forces maintain a severe naval blockade against Iranian ports, while Iranian suicide-drone attacks have reportedly extended pressure toward American logistical bases.",
+              "NATO Posture in the Baltic Region: British forces in southern Estonia are conducting military exercises and fortifying areas near the Russian border with anti-tank ditches and dragon's teeth obstacles.",
+            ],
           },
           {
             tag: "Strategic Context",
             title: "Escalation Dynamics",
+            references: bulletinReferences,
             text: "Understand how local events may affect regional security, deterrence, alliances, logistics, and strategic decision-making.",
+            details: [
+              "Global Economic and Logistical Bottlenecks: the closure of the Strait of Hormuz by Iran triggered a global crisis, affecting industrial supply chains in East Asia, especially those dependent on naphtha.",
+              "Domestic Political Pressure in the United States: the decision to seek peace with Iran produced political divisions, with criticism from Republican figures who considered the agreement strategically unfavorable.",
+              "Alliance Realignment and European Concerns: reports in the United Kingdom warned that British supply chains are unprepared for a possible war with Russia, while pressure grows for increased defense spending.",
+            ],
           },
           {
             tag: "International Law",
             title: "International Law and Armed Conflict",
+            references: bulletinReferences,
             text: "Analyze the legal dimensions of armed conflicts, including international humanitarian law, rules of engagement, civilian protection, proportionality, accountability, and the use of emerging technologies in warfare.",
+            details: [
+              "Legal Assessment of Military Operations: analysis of proportionality, distinction, military necessity, and civilian protection in attacks against urban areas, critical infrastructure, and dual-use targets.",
+              "Accountability in Armed Conflicts: monitoring potential violations of international humanitarian law, war crimes, indiscriminate attacks, and the use of autonomous or semi-autonomous systems.",
+              "Emerging Technologies and Regulation: discussion of drones, artificial intelligence, cyber warfare, electronic warfare, and autonomous systems under the international legal framework applicable to armed conflict.",
+            ],
           },
           {
             tag: "Technology in War",
             title: "Weapons and Systems",
+            references: bulletinReferences,
             text: "Observe the role of drones, missiles, air defense, electronic warfare, cyber operations, sensors, acoustic systems, and autonomous systems in current conflicts.",
+            details: [
+              "Hypersonic Weapons: Russia reportedly used the Oreshnik intermediate-range ballistic missile, designed to evade air-defense systems and reach hypersonic speeds with multiple warheads.",
+              "Autonomous Systems and Drones in Ukraine: large numbers of Russian drones reportedly operate daily over Kostiantynivka, while Ukrainian operators have adopted gamified incentive mechanisms to acquire battlefield equipment.",
+              "Extreme Electronic Warfare: Russian interference reportedly blocked GPS navigation signals affecting a British aircraft near Estonia, while ground troops seek ways to detect drone frequencies and resist electronic interference.",
+              "Cyber Vulnerabilities and Artificial Intelligence: Russian influence operations reportedly used hacked authentic accounts and AI-generated disinformation, while experts warned about vulnerabilities in AI safety safeguards.",
+            ],
           },
         ],
       },
@@ -237,32 +279,66 @@ function App() {
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
         title: "Atualizações sobre Conflitos em Andamento",
+        bulletin: "BOLETIM N° 01 — DIA 25 DE MAIO DE 2026",
+        referencesLabel: "Referências",
         items: [
           {
             tag: "Monitoramento de Conflitos",
             title: "Desenvolvimentos no Campo de Batalha",
+            references: bulletinReferences,
             text: "Acompanhe os principais acontecimentos em conflitos armados em andamento, incluindo operações militares, mudanças territoriais, padrões de escalada, negociações de cessar-fogo e eventos relevantes no campo de batalha.",
             featured: true,
+            details: [
+              "Acordo EUA-Irã: os Estados Unidos e o Irã alcançaram a estrutura de um memorando de entendimento para um cessar-fogo de 60 dias com o objetivo de encerrar a Operação Epic Fury. O acordo envolve a reabertura do Estreito de Ormuz sem a cobrança de pedágios iranianos e o eventual levantamento do bloqueio naval americano. No entanto, o debate sobre o desmantelamento das 11 toneladas de combustível nuclear iraniano e seu arsenal de mísseis balísticos foi adiado para negociações futuras. O conflito se destacou por uma taxa historicamente alta de baixas femininas nas forças armadas americanas, que representaram 12% dos feridos e 23% dos mortos em ação.",
+              "Ofensiva Russa na Ucrânia: a Rússia realizou um de seus maiores bombardeios noturnos recentes contra a Ucrânia, disparando 90 mísseis e 600 drones. O ataque teve Kiev como alvo principal, matando ao menos quatro pessoas e destruindo infraestrutura civil e áreas residenciais. Na linha de frente, a cidade de Kostiantynivka foi transformada em uma zona de morte, com a sua população original de 67.000 pessoas reduzida para cerca de 2.000 residentes que estão sendo evacuados em meio aos escombros.",
+              "Guerra Líbano-Israel: apesar de um acordo formal de cessar-fogo assinado em 17 de abril, os combates mortais prosseguem no Líbano. Um recente bombardeio aéreo israelense na vila de Sir al-Gharbiyeh matou 11 pessoas, incluindo seis mulheres e uma criança. O Primeiro-Ministro de Israel, Benjamin Netanyahu, declarou que o novo acordo com o Irã não limitará sua liberdade de atacar as forças do Hezbollah.",
+              "Outros focos de violência: no Paquistão, o grupo Exército de Libertação do Balochistão detonou uma bomba que descarrilou um trem de passageiros, matando de 14 a 16 pessoas. No Mali, o grupo afiliado à Al-Qaeda, JNIM, invadiu a capital Bamako usando como modelo as táticas adotadas na guerra da Síria.",
+            ],
           },
           {
             tag: "Visão Operacional",
             title: "Operações Militares",
+            references: bulletinReferences,
             text: "Acompanhe campanhas, movimentações de forças, ataques, ações defensivas, operações marítimas, atividade aérea e mudanças no ritmo operacional.",
+            details: [
+              "Desempenho da defesa ucraniana: durante o último ataque em massa da Rússia, as defesas aéreas da Ucrânia conseguiram abater a grande maioria dos drones e mísseis de cruzeiro, mas enfrentaram sérias dificuldades contra mísseis mais rápidos, interceptando apenas 11 dos 33 mísseis balísticos lançados. Na linha de contato, a 28ª Brigada de Infantaria Mecanizada da Ucrânia neutraliza sozinha cerca de 150 drones russos todos os dias.",
+              "Operações no Oriente Médio: os militares americanos mantêm um severo bloqueio naval aos portos iranianos, que Trump afirmou que continuará em força e efeito total até a assinatura do acordo final. Em resposta, as frentes de batalha avançaram para as próprias bases logísticas dos EUA através de constantes ataques iranianos de drones suicidas, incluindo um bombardeio recente que matou militares americanos em uma base no Kuwait.",
+              "Posicionamento da OTAN no Báltico: no sul da Estônia, tropas britânicas da brigada Black Rats executam exercícios militares ostensivos e estão fortificando a fronteira com a Rússia utilizando valas antitanque e obstáculos chamados dentes de dragão. Para escapar da forte vigilância russa de drones, soldados da OTAN em missões secretas estão se disfarçando de operários de construção civil.",
+            ],
           },
           {
             tag: "Contexto Estratégico",
             title: "Dinâmicas de Escalada",
+            references: bulletinReferences,
             text: "Entenda como eventos locais podem afetar a segurança regional, a dissuasão, alianças, logística e processos de decisão estratégica.",
+            details: [
+              "Gargalos econômicos e logísticos globais: o fechamento do Estreito de Ormuz pelo Irã provocou uma grave crise global. Na Ásia Oriental, países como Japão e Coreia do Sul sofrem com um severo desabastecimento de nafta, fundamental para a produção industrial e de embalagens, forçando empresas a alterar designs de produtos e racionar suprimentos básicos.",
+              "Pressão política interna nos EUA: a decisão de buscar a paz com o Irã causou uma ruptura dentro do partido de Donald Trump. Políticos como Ted Cruz, Lindsey Graham e Marco Rubio criticam a postura da administração, argumentando que o acordo é um erro desastroso que permite ao Irã manter o poder, consolidar seu financiamento e sair vitorioso diplomaticamente.",
+              "Rearranjo de alianças e preocupações na Europa: um relatório do Reino Unido advertiu que as cadeias de suprimentos britânicas estão completamente despreparadas para a hipótese de uma guerra com a Rússia. Como os EUA têm procurado transferir o fardo da defesa para a Europa, espera-se que o governo britânico aprove um aumento urgente de £18 bilhões em gastos de defesa. Em outro vetor diplomático estratégico, o distanciamento dos EUA forçou a Índia a tentar apaziguar as tensões com a China, seu rival regional histórico.",
+            ],
           },
           {
             tag: "Direito Internacional",
             title: "Direito Internacional e Conflitos Armados",
+            references: bulletinReferences,
             text: "Analise as dimensões jurídicas dos conflitos armados, incluindo Direito Internacional Humanitário, regras de engajamento, proteção de civis, proporcionalidade, responsabilização e uso de tecnologias emergentes na guerra.",
+            details: [
+              "Avaliação jurídica de operações militares: análise de proporcionalidade, distinção, necessidade militar e proteção de civis em ataques contra áreas urbanas, infraestrutura crítica e alvos de duplo uso.",
+              "Responsabilização em conflitos armados: acompanhamento de possíveis violações do Direito Internacional Humanitário, crimes de guerra, ataques indiscriminados e uso de sistemas autônomos ou semiautônomos.",
+              "Tecnologias emergentes e regulação: discussão sobre drones, inteligência artificial, guerra cibernética, guerra eletrônica e sistemas autônomos à luz das normas internacionais aplicáveis aos conflitos armados.",
+            ],
           },
           {
             tag: "Tecnologia na Guerra",
             title: "Armas e Sistemas",
+            references: bulletinReferences,
             text: "Observe o papel de drones, mísseis, defesa aérea, guerra eletrônica, operações cibernéticas, sensores, sistemas acústicos e sistemas autônomos nos conflitos atuais.",
+            details: [
+              "Armamento hipersônico: a Rússia empregou pela terceira vez o míssil balístico de alcance intermediário Oreshnik. Este projétil foi projetado para contornar baterias de defesa aérea como o Patriot, pois atinge velocidades hipersônicas de até 13.000 km/h e libera múltiplas ogivas ao longo de uma trajetória de mergulho extremamente íngreme. A vulnerabilidade da Ucrânia a esses ataques foi exacerbada porque os EUA esgotaram os estoques globais de interceptadores Patriot na sua guerra com o Irã.",
+              "Sistemas autônomos e drones na Ucrânia: mais de 1.000 drones russos sobrevoam diariamente os céus de Kostiantynivka. Em resposta a essa superioridade numérica, os ucranianos adotaram uma gamificação da guerra. Operadores de drones agora pontuam ao aniquilar infantaria e veículos russos, utilizando esses pontos para adquirir os melhores equipamentos disponíveis no mercado bélico online Brave1.",
+              "Guerra eletrônica extrema: um jato da Força Aérea Real Britânica, transportando o secretário de defesa britânico, sofreu interferência russa que bloqueou completamente seus sinais de navegação GPS enquanto sobrevoava os arredores da Estônia. As tropas terrestres ocidentais tentam contornar a guerra eletrônica inimiga usando caixas de cigarro adaptadas que emitem bipes ao detectar frequências de drones e treinando com novos drones kamikazes desenhados especificamente para resistir a esse tipo de interferência.",
+              "Vulnerabilidades cibernéticas e inteligência artificial: operações de influência russas, batizadas de Matryoshka, hackearam dezenas de contas autênticas de usuários em plataformas sociais para disseminar desinformação gerada por IA sobre o conflito ucraniano. Simultaneamente, especialistas alertaram que salvaguardas nos grandes modelos de IA podem ser facilmente burladas com o uso de poesia, instruindo os robôs a ignorarem bloqueios de segurança e a revelarem informações letais.",
+            ],
           },
         ],
       },
@@ -459,6 +535,10 @@ function App() {
         <div className="section-header">
           <p className="eyebrow">{t.conflicts.eyebrow}</p>
           <h2>{t.conflicts.title}</h2>
+
+          {t.conflicts.bulletin && (
+            <p className="bulletin-label">{t.conflicts.bulletin}</p>
+          )}
         </div>
 
         <div className="conflict-grid">
@@ -473,7 +553,27 @@ function App() {
             >
               <span className="tag">{item.tag}</span>
               <h3>{item.title}</h3>
+
+              {item.references && (
+                <div className="section-references">
+                  <strong>{t.conflicts.referencesLabel}:</strong>
+                  <ul>
+                    {item.references.map((reference) => (
+                      <li key={reference}>{reference}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               <p>{item.text}</p>
+
+              {item.details && (
+                <ul className="detail-list">
+                  {item.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+              )}
             </article>
           ))}
         </div>

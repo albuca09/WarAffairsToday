@@ -463,3 +463,65 @@ h1 {
     flex-direction: column;
   }
 }
+
+
+.bulletin-label {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(248, 113, 113, 0.14);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  color: #fecaca;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-references {
+  margin: 16px 0 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(110, 231, 183, 0.08);
+  border: 1px solid rgba(110, 231, 183, 0.22);
+}
+
+.section-references strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #6ee7b7;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-references ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.section-references li {
+  color: #d7e2f2;
+  line-height: 1.55;
+  font-size: 0.9rem;
+}
+
+.section-references li::marker {
+  color: #6ee7b7;
+}
+
+.detail-list {
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+.detail-list li {
+  color: #c7d2e4;
+  line-height: 1.65;
+  margin-bottom: 12px;
+  font-size: 0.92rem;
+}
+
+.detail-list li::marker {
+  color: #6ee7b7;
+}
