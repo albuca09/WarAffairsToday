@@ -120,6 +120,8 @@ h1 {
   color: #b7c3d8;
   font-size: 1.25rem;
   line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .hero-buttons {
@@ -290,6 +292,9 @@ h1 {
 .conflict-card p {
   color: #aeb9ca;
   line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .conflict-section {
@@ -488,7 +493,7 @@ h1 {
 .conflict-grid.reading-mode .conflict-card {
   width: 100%;
   max-width: 100%;
-  padding: 40px;
+  padding: 44px;
   transform: none;
 }
 
@@ -504,58 +509,20 @@ h1 {
 .conflict-grid.reading-mode .conflict-card h3 {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   line-height: 1.15;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .conflict-grid.reading-mode .conflict-card p {
-  font-size: 1.08rem;
-  line-height: 1.85;
-  max-width: 100%;
-}
-
-.conflict-grid.reading-mode .section-references {
-  margin: 22px 0 26px;
-}
-
-.conflict-grid.reading-mode .section-references li {
-  font-size: 0.98rem;
-  line-height: 1.65;
-}
-
-.conflict-grid.reading-mode .detail-list {
-  margin-top: 26px;
-}
-
-.conflict-grid.reading-mode .detail-list li {
-  font-size: 1.04rem;
+  font-size: 1.1rem;
   line-height: 1.9;
-  margin-bottom: 20px;
-}
-
-.show-all-button {
-  margin-top: 18px;
-  padding: 11px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(110, 231, 183, 0.45);
-  background: rgba(110, 231, 183, 0.1);
-  color: #6ee7b7;
-  font-weight: 800;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.show-all-button:hover {
-  background: rgba(110, 231, 183, 0.18);
-  transform: translateY(-2px);
-}
-
-.show-all-button:focus-visible {
-  outline: 2px solid rgba(110, 231, 183, 0.75);
-  outline-offset: 4px;
+  max-width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .section-references {
-  margin: 16px 0 18px;
+  margin: 24px 0 28px;
   padding: 16px 18px;
   border-radius: 18px;
   background: rgba(110, 231, 183, 0.08);
@@ -578,8 +545,10 @@ h1 {
 
 .section-references li {
   color: #d7e2f2;
-  line-height: 1.55;
-  font-size: 0.9rem;
+  line-height: 1.65;
+  font-size: 0.98rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .section-references li::marker {
@@ -587,19 +556,44 @@ h1 {
 }
 
 .detail-list {
-  margin: 18px 0 0;
+  margin: 26px 0 0;
   padding-left: 18px;
 }
 
 .detail-list li {
   color: #c7d2e4;
-  line-height: 1.65;
-  margin-bottom: 12px;
-  font-size: 0.92rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  font-size: 1.04rem;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 .detail-list li::marker {
   color: #6ee7b7;
+}
+
+.show-all-button {
+  margin-top: 18px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 231, 183, 0.45);
+  background: rgba(110, 231, 183, 0.1);
+  color: #6ee7b7;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.show-all-button:hover {
+  background: rgba(110, 231, 183, 0.18);
+  transform: translateY(-2px);
+}
+
+.show-all-button:focus-visible {
+  outline: 2px solid rgba(110, 231, 183, 0.75);
+  outline-offset: 4px;
 }
 
 @media (max-width: 1000px) {

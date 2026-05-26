@@ -76,37 +76,6 @@ const bulletins = {
         },
       ],
     },
-
-    /*
-      PARA ADICIONAR UM NOVO BOLETIM, COPIE O MODELO ABAIXO
-      E COLOQUE DEPOIS DO BLOCO ACIMA.
-
-    {
-      id: "2026-05-26",
-      label: "26 de maio de 2026",
-      bulletin: "BOLETIM N° 02 — DIA 26 DE MAIO DE 2026",
-      items: [
-        {
-          tag: "Monitoramento de Conflitos",
-          title: "Desenvolvimentos no Campo de Batalha",
-          references: [
-            "Financial Times — 26.05.2026",
-            "The Guardian — 26.05.2026",
-            "The New York Times — 26.05.2026",
-            "The Times — 26.05.2026",
-            "The Washington Post — 26.05.2026",
-          ],
-          text: "Texto introdutório da seção.",
-          featured: true,
-          details: [
-            "Primeiro ponto do boletim.",
-            "Segundo ponto do boletim.",
-            "Terceiro ponto do boletim.",
-          ],
-        },
-      ],
-    },
-    */
   ],
 
   en: [
@@ -250,7 +219,7 @@ function App() {
         referencesLabel: "References",
         selectLabel: "Select bulletin:",
         showAll: "Show all topics",
-        readingHint: "Click a topic to open reading mode.",
+        readingHint: "Click a topic to expand the full reading view.",
       },
 
       technology: {
@@ -395,7 +364,7 @@ function App() {
         referencesLabel: "Referências",
         selectLabel: "Selecionar boletim:",
         showAll: "Ver todos os tópicos",
-        readingHint: "Clique em um tópico para abrir o modo leitura.",
+        readingHint: "Clique em um tópico para expandir a leitura completa.",
       },
 
       technology: {
@@ -482,6 +451,8 @@ function App() {
   const selectedBulletin =
     availableBulletins.find((bulletin) => bulletin.id === selectedBulletinId) ||
     availableBulletins[0];
+
+  const isReadingMode = activeTopicIndex !== null;
 
   useEffect(() => {
     setActiveTopicIndex(null);
@@ -625,11 +596,11 @@ function App() {
             <p className="bulletin-label">{selectedBulletin.bulletin}</p>
           )}
 
-          {activeTopicIndex === null && (
+          {!isReadingMode && (
             <p className="reading-hint">{t.conflicts.readingHint}</p>
           )}
 
-          {activeTopicIndex !== null && (
+          {isReadingMode && (
             <button
               className="show-all-button"
               onClick={() => setActiveTopicIndex(null)}
@@ -641,9 +612,7 @@ function App() {
 
         <div
           className={
-            activeTopicIndex !== null
-              ? "conflict-grid reading-mode"
-              : "conflict-grid"
+            isReadingMode ? "conflict-grid reading-mode" : "conflict-grid"
           }
         >
           {visibleConflictItems.map(({ item, index }) => (
@@ -665,7 +634,9 @@ function App() {
                 <h3>{item.title}</h3>
               </button>
 
-              {item.references && (
+              <p>{item.text}</p>
+
+              {isReadingMode && item.references && (
                 <div className="section-references">
                   <strong>{t.conflicts.referencesLabel}:</strong>
                   <ul>
@@ -676,9 +647,7 @@ function App() {
                 </div>
               )}
 
-              <p>{item.text}</p>
-
-              {item.details && (
+              {isReadingMode && item.details && (
                 <ul className="detail-list">
                   {item.details.map((detail) => (
                     <li key={detail}>{detail}</li>
