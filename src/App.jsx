@@ -276,7 +276,7 @@ function App() {
       stats: [
         ["OSINT", "Análise de Fontes Abertas"],
         ["IA", "Observação Tecnológica"],
-        ["GE", "Foco em Guerra Eletrônica"],
+        ["GE", "Guerra Eletrônica"],
         ["GA", "Guerra Acústica"],
         ["G Ciber", "Guerra Cibernética"],
         ["AUTO", "Sistemas Autônomos"],
