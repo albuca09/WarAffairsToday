@@ -346,8 +346,12 @@ h1 {
 
 .conflict-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.compact-conflict-grid {
+  align-items: start;
 }
 
 .conflict-card {
@@ -364,7 +368,6 @@ h1 {
 }
 
 .featured-conflict {
-  grid-row: span 2;
   background:
     linear-gradient(180deg, rgba(248, 113, 113, 0.18), rgba(255, 255, 255, 0.05)),
     rgba(255, 255, 255, 0.07);
@@ -536,19 +539,14 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero,
   .about {
     grid-template-columns: 1fr;
   }
 
   .conflict-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .featured-conflict {
-    grid-row: auto;
-    grid-column: span 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .expanded-conflict {
@@ -582,7 +580,6 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .featured-conflict,
   .expanded-conflict {
     grid-column: span 1;
   }
