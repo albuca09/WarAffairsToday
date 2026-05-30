@@ -91,13 +91,19 @@ a {
 }
 
 .hero {
-  min-height: 78vh;
+  min-height: 58vh;
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
   align-items: center;
-  gap: 48px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.hero-clean {
+  grid-template-columns: 1fr;
+}
+
+.hero-content {
+  max-width: 920px;
 }
 
 .eyebrow {
@@ -116,7 +122,7 @@ h1 {
 }
 
 .subtitle {
-  max-width: 720px;
+  max-width: 780px;
   color: #b7c3d8;
   font-size: 1.25rem;
   line-height: 1.7;
@@ -150,64 +156,6 @@ h1 {
 .primary-button:hover,
 .secondary-button:hover {
   transform: translateY(-3px);
-}
-
-.radar-panel {
-  min-height: 420px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 32px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(18px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
-}
-
-.radar-circle {
-  position: relative;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  border: 1px solid rgba(110, 231, 183, 0.45);
-  background:
-    radial-gradient(circle, rgba(110, 231, 183, 0.24), transparent 8%),
-    repeating-radial-gradient(circle, transparent 0 35px, rgba(110, 231, 183, 0.16) 36px 37px);
-  overflow: hidden;
-}
-
-.radar-line {
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background: linear-gradient(90deg, #6ee7b7, transparent);
-  top: 50%;
-  left: 50%;
-  transform-origin: left;
-  animation: scan 3s linear infinite;
-}
-
-@keyframes scan {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.radar-panel p {
-  margin: 28px 0 8px;
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
-.radar-panel span {
-  color: #9aa8bd;
-  text-align: center;
-  padding: 0 24px;
 }
 
 .stats {
@@ -259,7 +207,7 @@ h1 {
 }
 
 .card {
-  min-height: 280px;
+  min-height: 220px;
   padding: 28px;
   border-radius: 28px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
@@ -270,11 +218,6 @@ h1 {
 .card:hover {
   transform: translateY(-8px);
   border-color: rgba(110, 231, 183, 0.55);
-}
-
-.icon {
-  font-size: 2.4rem;
-  margin-bottom: 22px;
 }
 
 .card h3,
@@ -540,7 +483,6 @@ h1 {
 }
 
 @media (max-width: 1100px) {
-  .hero,
   .about {
     grid-template-columns: 1fr;
   }
@@ -586,14 +528,5 @@ h1 {
 
   .conflict-section {
     padding: 24px;
-  }
-
-  .radar-panel {
-    min-height: 320px;
-  }
-
-  .radar-circle {
-    width: 190px;
-    height: 190px;
   }
 }

@@ -9,183 +9,267 @@ const bulletins = [
     bulletinPt: "BOLETIM N° 01 — DIA 25 DE MAIO DE 2026",
     bulletinEn: "BULLETIN No. 01 — MAY 25, 2026",
     references: [
+      { label: "Financial Times — 25.05.2026", url: "https://www.ft.com/" },
+      { label: "The Guardian — 25.05.2026", url: "https://www.theguardian.com/" },
+      { label: "The New York Times — 25.05.2026", url: "https://www.nytimes.com/" },
+      { label: "The Times — 25.05.2026", url: "https://www.thetimes.com/" },
+      { label: "The Washington Post — 25.05.2026", url: "https://www.washingtonpost.com/" },
+    ],
+    items: {
+      pt: [
+        {
+          tag: "Notícias Recentes",
+          title: "Notícias Recentes sobre Conflitos Armados",
+          text: "Panorama consolidado dos principais acontecimentos recentes em conflitos armados, incluindo eventos no campo de batalha, negociações de cessar-fogo, padrões de escalada e focos de violência.",
+          featured: true,
+          details: [
+            "Acordo EUA-Irã: os Estados Unidos e o Irã alcançaram a estrutura de um memorando de entendimento para um cessar-fogo de 60 dias com o objetivo de encerrar a Operação Epic Fury. O acordo envolve a reabertura do Estreito de Ormuz sem a cobrança de pedágios iranianos e o eventual levantamento do bloqueio naval americano.",
+            "Ofensiva Russa na Ucrânia: a Rússia realizou um de seus maiores bombardeios noturnos recentes contra a Ucrânia, disparando 90 mísseis e 600 drones. O ataque teve Kiev como alvo principal, causando mortes e danos à infraestrutura civil.",
+            "Guerra Líbano-Israel: apesar de um acordo formal de cessar-fogo, os combates mortais prosseguem no Líbano, com bombardeios aéreos israelenses e tensão contínua envolvendo o Hezbollah.",
+            "Outros focos de violência: ataques foram registrados no Paquistão e no Mali, incluindo ações atribuídas ao Exército de Libertação do Balochistão e ao grupo JNIM.",
+          ],
+        },
+        {
+          tag: "Inteligência Operacional",
+          title: "Inteligência Operacional",
+          text: "Análise operacional de campanhas, movimentações de forças, desempenho de defesa aérea, bloqueios navais, guerra eletrônica, drones, sensores, operações cibernéticas e sistemas autônomos.",
+          details: [
+            "Desempenho da defesa ucraniana: durante o último ataque em massa da Rússia, as defesas aéreas da Ucrânia interceptaram a maioria dos drones e mísseis de cruzeiro, mas enfrentaram maiores dificuldades contra mísseis balísticos.",
+            "Operações no Oriente Médio: os militares americanos mantêm um bloqueio naval severo aos portos iranianos, enquanto ataques com drones ampliam a pressão contra bases logísticas dos EUA.",
+            "Posicionamento da OTAN no Báltico: tropas britânicas realizam exercícios e fortificam áreas próximas à fronteira russa com valas antitanque e obstáculos defensivos.",
+            "Tecnologia na guerra: drones, mísseis hipersônicos, guerra eletrônica, inteligência artificial e operações cibernéticas aparecem como fatores decisivos no ritmo operacional.",
+          ],
+        },
+        {
+          tag: "Perspectivas Futuras",
+          title: "Perspectivas Futuras",
+          text: "Avaliação das implicações futuras para escalada regional, alianças, logística, cadeias de suprimento, dissuasão e tomada de decisão estratégica.",
+          details: [
+            "Gargalos econômicos e logísticos globais: o fechamento ou restrição do Estreito de Ormuz tem potencial para afetar cadeias industriais dependentes de energia e derivados petroquímicos.",
+            "Pressão política interna nos EUA: decisões sobre negociações com o Irã podem produzir divisões políticas e afetar a coerência da política externa americana.",
+            "Rearranjo de alianças e preocupações na Europa: relatórios indicam preocupação crescente com cadeias de suprimento, prontidão logística e sustentação de conflitos prolongados.",
+            "Aceleração tecnológica: drones, inteligência artificial, guerra eletrônica, capacidades cibernéticas, sistemas hipersônicos e plataformas autônomas tendem a ganhar centralidade nos conflitos futuros.",
+          ],
+        },
+        {
+          tag: "Direito Internacional",
+          title: "O Direito e os Conflitos Armados",
+          text: "Análise jurídica dos conflitos armados, incluindo Direito Internacional Humanitário, regras de engajamento, proteção de civis, proporcionalidade, responsabilização e tecnologias emergentes.",
+          details: [
+            "Direito Internacional Humanitário: a análise dos conflitos deve considerar os princípios da distinção, proporcionalidade, necessidade militar e precaução nos ataques.",
+            "Proteção de civis: ataques contra áreas urbanas, infraestrutura crítica, zonas residenciais e alvos de duplo uso levantam questões recorrentes sobre danos civis e legalidade operacional.",
+            "Responsabilização: o acompanhamento de possíveis violações do Direito Internacional Humanitário, crimes de guerra, ataques indiscriminados e responsabilidade de comando permanece essencial.",
+            "Tecnologias emergentes: drones, inteligência artificial, operações cibernéticas, guerra eletrônica, sistemas autônomos e armas hipersônicas desafiam os marcos jurídicos existentes.",
+          ],
+        },
+      ],
+      en: [
+        {
+          tag: "Recent Conflict News",
+          title: "Recent News on Armed Conflicts",
+          text: "A consolidated overview of recent armed conflict developments, including battlefield events, ceasefire negotiations, escalation patterns, and violence hotspots.",
+          featured: true,
+          details: [
+            "U.S.–Iran Agreement: the United States and Iran reached the framework of a memorandum of understanding for a 60-day ceasefire intended to end Operation Epic Fury.",
+            "Russian Offensive in Ukraine: Russia conducted one of its largest recent overnight bombardments against Ukraine, launching missiles and drones against Kyiv and other targets.",
+            "Lebanon–Israel War: despite formal ceasefire arrangements, deadly fighting continued in Lebanon with Israeli airstrikes and persistent Hezbollah-related tensions.",
+            "Other violence hotspots were reported in Pakistan and Mali, including attacks attributed to the Balochistan Liberation Army and JNIM.",
+          ],
+        },
+        {
+          tag: "Operational Intelligence",
+          title: "Operational Intelligence",
+          text: "Operational analysis of campaigns, force movements, air defense, naval blockades, electronic warfare, drones, sensors, cyber activity, and autonomous systems.",
+          details: [
+            "Ukrainian air defenses intercepted most drones and cruise missiles but faced greater difficulty against ballistic missiles.",
+            "U.S. forces maintained pressure through naval blockade operations, while drone attacks reportedly extended pressure against American logistics hubs.",
+            "NATO forces strengthened posture in the Baltic region with military exercises and border fortifications.",
+            "Drones, hypersonic missiles, electronic warfare, artificial intelligence, and cyber operations remain decisive operational factors.",
+          ],
+        },
+        {
+          tag: "Future Outlook",
+          title: "Future Perspectives",
+          text: "Assessment of future implications for escalation dynamics, alliance posture, logistics, supply chains, deterrence, and strategic decision-making.",
+          details: [
+            "Global economic and logistical bottlenecks may intensify if maritime chokepoints remain contested.",
+            "Domestic political pressure in the United States may affect the coherence of policy toward Iran and regional security.",
+            "European governments may face growing concerns over supply chains, readiness, and sustained defense spending.",
+            "Drones, AI, cyber capabilities, hypersonic systems, and autonomous platforms are likely to become even more central to future conflict dynamics.",
+          ],
+        },
+        {
+          tag: "International Law",
+          title: "Law and Armed Conflicts",
+          text: "Legal analysis of armed conflicts, including international humanitarian law, rules of engagement, civilian protection, proportionality, accountability, and emerging technologies.",
+          details: [
+            "International humanitarian law requires distinction, proportionality, military necessity, and precaution in attacks.",
+            "Attacks against urban areas, critical infrastructure, residential zones, and dual-use facilities raise recurring questions about civilian harm.",
+            "Monitoring possible violations, war crimes, indiscriminate attacks, and command responsibility remains essential.",
+            "Drones, AI, cyber operations, electronic warfare, autonomous systems, and hypersonic weapons challenge existing legal frameworks.",
+          ],
+        },
+      ],
+    },
+  },
+
+  {
+    id: "2026-05-30",
+    labelPt: "30 de maio de 2026",
+    labelEn: "May 30, 2026",
+    bulletinPt: "BOLETIM N° 02 — DIA 30 DE MAIO DE 2026",
+    bulletinEn: "BULLETIN No. 02 — MAY 30, 2026",
+    references: [
+      { label: "Die Welt — 28.05.2026", url: "https://www.welt.de/" },
+      { label: "The Times — 29.05.2026", url: "https://www.thetimes.com/" },
+      { label: "The Wall Street Journal — 29.05.2026", url: "https://www.wsj.com/" },
       {
-        label: "Financial Times — 25.05.2026",
-        url: "https://www.ft.com/",
+        label: "The Human Cost of Military Aggression — Al Jazeera",
+        url: "https://liberties.aljazeera.com/en/the-human-cost-of-military-aggression/",
       },
       {
-        label: "The Guardian — 25.05.2026",
-        url: "https://www.theguardian.com/",
+        label: "Iran war updates — Al Jazeera",
+        url: "https://www.aljazeera.com/news/liveblog/2026/4/4/iran-war-live-tehran-downs-2-us-warplanes-israel-bombs-lebanon-bridges",
       },
       {
-        label: "The New York Times — 25.05.2026",
-        url: "https://www.nytimes.com/",
+        label: "Iran calls for a new regional security order — Tehran Times",
+        url: "https://www.tehrantimes.com/news/526850/Iran-calls-for-a-new-regional-security-order",
       },
       {
-        label: "The Times — 25.05.2026",
-        url: "https://www.thetimes.com/",
+        label: "Analysis: The war on Iran is at a crossroads — Al Jazeera",
+        url: "https://www.aljazeera.com/news/2026/3/12/analysis-the-war-on-iran-is-at-a-crossroads",
       },
       {
-        label: "The Washington Post — 25.05.2026",
-        url: "https://www.washingtonpost.com/",
+        label: "Can NATO survive if Trump pulls the US out? — Al Jazeera",
+        url: "https://www.aljazeera.com/news/2026/4/10/closer-to-a-break-than-ever-can-nato-survive-if-trump-pulls-the-us-out",
+      },
+      {
+        label: "Two years into Sudan's war — Al Jazeera Interactives",
+        url: "https://interactive.aljazeera.com/aje/2025/sudan-voices/",
+      },
+      {
+        label: "State of trauma — Al Jazeera",
+        url: "https://www.aljazeera.com/news/2026/5/29/state-of-trauma-israel-wrestles-with-mental-aftershocks-of-war",
+      },
+      {
+        label: "Mapping the Red Sea attacks — Al Jazeera Interactives",
+        url: "https://interactive.aljazeera.com/aje/2024/mapping-red-sea-shipping-attacks/",
+      },
+      {
+        label: "BRICS condemns attacks on Iran — Al Jazeera",
+        url: "https://www.aljazeera.com/news/2025/7/7/brics-condemns-attacks-on-iran-gaza-war-trump-tariffs-key-takeaways",
+      },
+      {
+        label: "Israel vague about new diplomatic horizon — Al Jazeera",
+        url: "https://www.aljazeera.com/news/2014/10/12/israel-vague-about-new-diplomatic-horizon",
       },
     ],
+    items: {
+      pt: [
+        {
+          tag: "Notícias Recentes",
+          title: "Notícias Recentes sobre Conflitos Armados",
+          text: "Panorama consolidado dos principais acontecimentos recentes em conflitos armados, com destaque para a guerra EUA-Irã, o conflito Israel-Líbano, a guerra Rússia-Ucrânia e a situação em Gaza.",
+          featured: true,
+          details: [
+            "Guerra EUA-Irã: os Estados Unidos e o Irã estão muito próximos de assinar um memorando de entendimento para um cessar-fogo de 60 dias. O acordo exige que o Irã libere e não cobre pedágios no Estreito de Ormuz; em troca, os EUA permitiriam o descongelamento de ativos iranianos. O presidente Donald Trump ainda não aprovou formalmente os termos finais, enquanto o Irã lançou recentemente um míssil balístico, interceptado, contra o Kuwait como demonstração de força.",
+            "Conflito Israel-Líbano: Israel intensificou sua incursão, realizando ataques aéreos na região de Beirute pela primeira vez em semanas e bombardeando pesadamente a antiga cidade portuária de Tiro e os arredores do histórico Castelo de Beaufort. As forças israelenses estão arrasando vilarejos para estabelecer uma zona de amortecimento de 8 a 10 quilômetros da fronteira. Autoridades libanesas reportam mais de 3.269 mortos desde o início da incursão terrestre.",
+            "Guerra Rússia-Ucrânia: o conflito entrou em nova fase, com a Ucrânia rompendo parcialmente a guerra estática de posições e realizando invasões táticas além das linhas russas, apoiada por campanhas de drones que teriam causado cerca de 35.000 baixas russas mensais. Em retaliação, a Rússia disparou novamente o míssil balístico hipersônico Oreshnik perto de Bila Tserkva, sem registro de mortes nesse ataque. O presidente ucraniano Volodymyr Zelensky apelou por urgência no fornecimento de mísseis Patriot pelos EUA.",
+            "Gaza: Israel confirmou a morte de Mohammed Odeh, recém-nomeado comandante do braço armado do Hamas e ex-chefe de inteligência do grupo.",
+          ],
+        },
+        {
+          tag: "Inteligência Operacional",
+          title: "Inteligência Operacional",
+          text: "Análise operacional multidomínio dos conflitos atuais, combinando doutrina militar, análise de redes, inteligência baseada em atividades, automação de dados e avaliação de ameaças tecnológicas.",
+          details: [
+            "Ameaça de drones do Hezbollah e Análise de Redes: o grupo libanês adotou táticas inspiradas na guerra da Ucrânia, empregando drones explosivos FPV e sensores noturnos. Esses drones se tornaram um dos maiores riscos para tropas israelenses no norte, e cerca de 80% deles seriam controlados por cabos de fibra ótica, tornando-os quase imunes a interferência eletrônica. A inteligência operacional pode aplicar Análise de Redes Sociais e Análise de Vínculos para mapear cadeia de suprimentos, operadores, líderes de células e nós críticos da rede adversária.",
+            "Defesa aérea e mísseis hipersônicos: o míssil russo Oreshnik atinge velocidades superiores a Mach 10, criando grande dificuldade de interceptação. A camada de plasma superaquecido ao redor do projétil pode bloquear sinais de rádio e satélite, reduzindo a possibilidade de correções de curso, mas também afetando a precisão terminal. Para lidar com a incerteza e o engano, analistas podem aplicar Técnicas Analíticas Estruturadas, especialmente detecção de engano e análise preditiva.",
+            "Frota fantasma e Inteligência Baseada em Atividades: para contornar sanções e bloqueios, o Irã expandiu o uso de uma armada clandestina de navios-tanque. Navios mascaram identidade, desligam radares, cobrem nomes e realizam transferências de petróleo navio-a-navio próximas à costa da Malásia. A ABI correlaciona dados espaciais e temporais, imagens de satélite, transações financeiras e rotas navais para revelar padrões de vida e transações ocultas.",
+            "Integração e automação de dados: a inteligência contemporânea atua em múltiplos domínios e usa tecnologias avançadas no ciclo TCPED. A aplicação de IA e aprendizado de máquina permite lidar com grandes volumes de dados, automatizar reconhecimento de alvos e apoiar predições baseadas em algoritmos e análise de redes. Isso libera analistas humanos da triagem mecânica e permite foco em raciocínio crítico, hipóteses e julgamentos de alto valor.",
+          ],
+        },
+        {
+          tag: "Perspectivas Futuras",
+          title: "Perspectivas Futuras",
+          text: "Avaliação das tendências futuras de escalada, rearranjo de alianças, deficiências logísticas, segurança energética e resiliência militar diante de conflitos prolongados.",
+          details: [
+            "Risco de escalada e mudança de alianças: a disputa geopolítica sobre o Cáucaso está se intensificando, com EUA e Rússia disputando influência na Armênia. A Armênia deseja aproximar-se da União Europeia e do Ocidente, enquanto o presidente russo Vladimir Putin faz ameaças abertas e traça paralelos com as causas da guerra na Ucrânia.",
+            "Deficiências logísticas: relatórios mostram que aliados ocidentais podem não estar preparados para sustentar combates longos. A Austrália alertou que carece de combustível, tropas especializadas e estoques de armas guiadas para enfrentar ameaças imediatas, enquanto grandes projetos com EUA e Reino Unido levarão décadas para gerar resultados. Na Europa, exercícios indicam que a destruição de poucos nós ferroviários ou portos-chave pode atrasar severamente qualquer reposicionamento da OTAN no flanco leste.",
+            "Cadeias de suprimento energético como segurança nacional: as guerras no Irã e na Ucrânia transformaram a energia em instrumento de coerção. Países passam a enxergar energias renováveis e geração distribuída não apenas como políticas ambientais, mas como componentes de resiliência, independência logística e sustentação militar em tempos de guerra.",
+          ],
+        },
+        {
+          tag: "Direito Internacional",
+          title: "O Direito e os Conflitos Armados",
+          text: "Análise das bases legais, regras de engajamento, tratamento de prisioneiros, responsabilização de forças especiais e impactos jurídicos do uso de inteligência artificial no campo de batalha.",
+          details: [
+            "Bases legais e regras de engajamento: operações militares e coleta de inteligência no campo de batalha estão submetidas ao Direito dos Conflitos Armados, ao Direito Internacional dos Direitos Humanos e às Regras de Engajamento, exigindo equilíbrio entre necessidade militar, humanidade e proporcionalidade nos ataques.",
+            "Tratamento e compartilhamento de prisioneiros: interrogatórios devem respeitar as Convenções de Genebra e proteger prisioneiros contra tortura e maus-tratos. No Reino Unido, os Princípios de Fulford orientam que a inteligência britânica não compartilhe informações militares com nações quando houver risco de facilitar atos ilícitos, como execuções ou rendições extraordinárias.",
+            "Responsabilização de forças especiais: investigações em andamento no Reino Unido examinam táticas empregadas pelas Forças Especiais britânicas na Guerra do Afeganistão entre 2010 e 2013. O inquérito apura relatos de devolução de prisioneiros a edifícios para posterior execução sob a justificativa de serem homens em idade de combate.",
+            "Tecnologias emergentes e IA no campo de batalha: o uso de inteligência artificial em armamentos autônomos levanta preocupações no direito internacional. A redução do controle humano pode contrariar o princípio de que a violência letal deve ser empregada apenas como última e estrita opção em legítima defesa.",
+          ],
+        },
+      ],
+      en: [
+        {
+          tag: "Recent Conflict News",
+          title: "Recent News on Armed Conflicts",
+          text: "A consolidated overview of recent armed conflict developments, focusing on the U.S.–Iran war, the Israel–Lebanon conflict, the Russia–Ukraine war, and Gaza.",
+          featured: true,
+          details: [
+            "U.S.–Iran War: the United States and Iran are reportedly close to signing a memorandum of understanding for a 60-day ceasefire. The arrangement would require Iran to reopen the Strait of Hormuz without charging tolls, while the United States would allow Iranian assets to be unfrozen. President Donald Trump has not formally approved the final terms, while Iran recently launched a ballistic missile, intercepted, toward Kuwait as a show of force.",
+            "Israel–Lebanon Conflict: Israel intensified its incursion, carrying out airstrikes in the Beirut area for the first time in weeks and heavily bombing Tyre and areas near Beaufort Castle. Israeli forces are reportedly clearing villages to establish an 8-to-10-kilometer buffer zone from the border.",
+            "Russia–Ukraine War: the conflict entered a new phase as Ukraine reportedly broke elements of static positional warfare and conducted tactical incursions beyond Russian front lines. Russia again launched the Oreshnik hypersonic ballistic missile near Bila Tserkva, while Ukraine requested urgent Patriot missile supplies from the United States.",
+            "Gaza: Israel confirmed the death of Mohammed Odeh, recently appointed commander of Hamas's armed wing and former intelligence chief of the group.",
+          ],
+        },
+        {
+          tag: "Operational Intelligence",
+          title: "Operational Intelligence",
+          text: "A multidomain operational intelligence assessment combining military doctrine, network analysis, activity-based intelligence, data automation, and threat evaluation.",
+          details: [
+            "Hezbollah drone threat and social network analysis: Hezbollah reportedly adopted tactics from the Ukraine war, including FPV explosive drones and night sensors. Many drones are allegedly controlled through fiber-optic cables, making them highly resistant to jamming. Analysts can use social network analysis and link analysis to identify operators, supply chains, cell leaders, and critical nodes.",
+            "Air defense and hypersonic missiles: Russia's Oreshnik missile reportedly reaches speeds above Mach 10, complicating interception. Analysts may rely on structured analytic techniques, deception detection, and predictive analysis to anticipate launch indicators before interception becomes physically difficult.",
+            "Shadow fleet and activity-based intelligence: Iran reportedly expanded a clandestine tanker fleet to bypass sanctions and naval blockades. Activity-based intelligence can correlate satellite imagery, financial transactions, maritime routes, and ship-to-ship transfers to uncover hidden patterns.",
+            "Data integration and automation: modern intelligence uses AI and machine learning across the TCPED cycle to process big data, automate target recognition, and support predictive analysis, freeing human analysts for critical reasoning and high-value judgment.",
+          ],
+        },
+        {
+          tag: "Future Outlook",
+          title: "Future Perspectives",
+          text: "Assessment of future escalation, alliance shifts, logistical weaknesses, energy security, and military resilience in prolonged conflicts.",
+          details: [
+            "Escalation risk and alliance shifts: geopolitical competition over the Caucasus is intensifying, with the United States and Russia competing for influence in Armenia.",
+            "Logistical deficiencies: reports indicate that some Western allies may not be prepared to sustain long-duration combat. Fuel shortages, limited specialized personnel, and insufficient guided weapons stocks remain key vulnerabilities.",
+            "Energy supply chains as national security: wars in Iran and Ukraine have turned energy into a strategic weapon. Renewable energy and distributed generation are increasingly viewed as tools of resilience and military independence.",
+          ],
+        },
+        {
+          tag: "International Law",
+          title: "Law and Armed Conflicts",
+          text: "Legal analysis of rules of engagement, prisoner treatment, accountability, and the implications of artificial intelligence in armed conflict.",
+          details: [
+            "Legal basis and rules of engagement: military operations and battlefield intelligence collection are governed by the law of armed conflict, international human rights law, and rules of engagement.",
+            "Prisoner treatment and intelligence sharing: interrogations must comply with the Geneva Conventions and protect prisoners from torture and mistreatment. Policies such as the Fulford Principles restrict intelligence sharing when there is a risk of enabling unlawful acts.",
+            "Special forces accountability: ongoing investigations in the United Kingdom examine alleged practices by British Special Forces during the Afghanistan War between 2010 and 2013.",
+            "Emerging technologies and battlefield AI: autonomous weapons and AI-enabled targeting raise major concerns under international law, especially when human control over lethal force is reduced.",
+          ],
+        },
+      ],
+    },
   },
 ];
 
 function App() {
   const [lang, setLang] = useState("pt");
-  const [selectedDay, setSelectedDay] = useState("2026-05-25");
+  const [selectedDay, setSelectedDay] = useState("2026-05-30");
   const [expandedConflict, setExpandedConflict] = useState(null);
 
   const selectedBulletin =
     bulletins.find((bulletin) => bulletin.id === selectedDay) || bulletins[0];
 
-  const content = {
-    en: {
-      nav: {
-        conflicts: "Conflicts",
-        technology: "Technology",
-        sources: "Sources",
-        about: "About",
-      },
-
-      hero: {
-        eyebrow: "Operational Intelligence • Defense Technology • Modern Warfare",
-        title: "War Affairs Today",
-        subtitle:
-          "A visual intelligence briefing platform focused on modern conflicts, emerging defense technologies, armed conflict news, and operational analysis.",
-        primary: "View Bulletin",
-        secondary: "Technology Watch",
-        radarTitle: "Live Intelligence Monitor",
-        radarText: "Tracking conflicts, defense technology, and operational trends",
-      },
-
-      stats: [
-        ["24/7", "Monitoring mindset"],
-        ["OSINT", "Open-source analysis"],
-        ["AI", "Technology watch"],
-        ["EW", "Electronic warfare focus"],
-        ["AW", "Acoustic warfare"],
-        ["Cyber", "Cyber warfare"],
-        ["AUTO", "Autonomous systems"],
-      ],
-
-      conflicts: {
-        eyebrow: "Armed Conflict News",
-        title: "Updates on Ongoing Conflicts",
-        bulletin: selectedBulletin.bulletinEn,
-        daySelectorLabel: "Select bulletin date",
-        expandLabel: "Click to expand",
-        collapseLabel: "Click to collapse",
-        referencesLabel: "References",
-        items: [
-          {
-            tag: "Recent Conflict News",
-            title: "Recent News on Armed Conflicts",
-            references: selectedBulletin.references,
-            text: "A consolidated overview of the main recent developments in armed conflicts, including battlefield events, ceasefire negotiations, escalation patterns, and violence hotspots.",
-            featured: true,
-            details: [
-              "U.S.–Iran Agreement: the United States and Iran reached the framework of a memorandum of understanding for a 60-day ceasefire intended to end Operation Epic Fury. The agreement includes reopening the Strait of Hormuz without Iranian tolls and the eventual lifting of the American naval blockade. However, discussions on dismantling Iranian nuclear fuel and ballistic missiles were postponed to future negotiations.",
-              "Russian Offensive in Ukraine: Russia conducted one of its largest recent overnight bombardments against Ukraine, launching missiles and drones, with Kyiv as a main target and damage to civilian infrastructure and residential areas.",
-              "Lebanon–Israel War: despite a formal ceasefire agreement, deadly fighting continues in Lebanon, including recent Israeli airstrikes. Israeli officials also stated that arrangements with Iran would not restrict freedom of action against Hezbollah forces.",
-              "Other Violence Hotspots: attacks were also reported in Pakistan and Mali, including an attack attributed to the Balochistan Liberation Army and operations by JNIM, an Al-Qaeda-affiliated group.",
-            ],
-          },
-          {
-            tag: "Operational Intelligence",
-            title: "Operational Intelligence",
-            references: selectedBulletin.references,
-            text: "Operational analysis of campaigns, force movements, air defense performance, naval blockades, electronic warfare, drones, sensors, cyber activity, and autonomous systems.",
-            details: [
-              "Ukrainian Air Defense Performance: during the latest Russian mass attack, Ukrainian air defenses intercepted most drones and cruise missiles but faced greater difficulty against faster ballistic missiles.",
-              "Middle East Operations: U.S. forces maintain a severe naval blockade against Iranian ports, while Iranian suicide-drone attacks have reportedly extended pressure toward American logistical bases.",
-              "NATO Posture in the Baltic Region: British forces in southern Estonia are conducting military exercises and fortifying areas near the Russian border with anti-tank ditches and dragon's teeth obstacles.",
-              "Hypersonic Weapons: Russia reportedly used the Oreshnik intermediate-range ballistic missile, designed to evade air-defense systems and reach hypersonic speeds with multiple warheads.",
-              "Autonomous Systems and Drones in Ukraine: large numbers of Russian drones reportedly operate daily over Kostiantynivka, while Ukrainian operators have adopted gamified incentive mechanisms to acquire battlefield equipment.",
-              "Extreme Electronic Warfare: Russian interference reportedly blocked GPS navigation signals affecting a British aircraft near Estonia, while ground troops seek ways to detect drone frequencies and resist electronic interference.",
-              "Cyber Vulnerabilities and Artificial Intelligence: Russian influence operations reportedly used hacked authentic accounts and AI-generated disinformation, while experts warned about vulnerabilities in AI safety safeguards.",
-            ],
-          },
-          {
-            tag: "Future Outlook",
-            title: "Future Perspectives",
-            references: selectedBulletin.references,
-            text: "Assessment of future implications for escalation dynamics, alliance posture, logistics, supply chains, deterrence, and strategic decision-making.",
-            details: [
-              "Global Economic and Logistical Bottlenecks: the closure of the Strait of Hormuz by Iran triggered a global crisis, affecting industrial supply chains in East Asia, especially those dependent on naphtha.",
-              "Domestic Political Pressure in the United States: the decision to seek peace with Iran produced political divisions, with criticism from Republican figures who considered the agreement strategically unfavorable.",
-              "Alliance Realignment and European Concerns: reports in the United Kingdom warned that British supply chains are unprepared for a possible war with Russia, while pressure grows for increased defense spending.",
-              "Strategic Reorientation: the distancing of the United States from some traditional security commitments may force regional actors to recalibrate diplomatic, military, and economic alignments.",
-              "Technological Acceleration: drones, artificial intelligence, electronic warfare, cyber capabilities, hypersonic systems, and autonomous platforms are likely to become even more central to future conflict dynamics.",
-            ],
-          },
-          {
-            tag: "International Law",
-            title: "Law and Armed Conflicts",
-            references: selectedBulletin.references,
-            text: "Legal analysis of armed conflicts, including international humanitarian law, rules of engagement, civilian protection, proportionality, accountability, and emerging technologies.",
-            details: [
-              "International Humanitarian Law: future conflict assessments must consider the principles of distinction, proportionality, military necessity, and precaution in attacks.",
-              "Civilian Protection: attacks against urban areas, critical infrastructure, residential zones, and dual-use facilities raise recurring questions about civilian harm and operational legality.",
-              "Accountability: monitoring potential violations of international humanitarian law, war crimes, indiscriminate attacks, and command responsibility remains essential for conflict analysis.",
-              "Emerging Technologies: drones, artificial intelligence, cyber operations, electronic warfare, autonomous systems, and hypersonic weapons challenge existing legal frameworks and rules of engagement.",
-              "Legal-Operational Interface: modern warfare increasingly requires integrated assessment of tactical necessity, strategic effects, legal constraints, and technological risk.",
-            ],
-          },
-        ],
-      },
-
-      technology: {
-        eyebrow: "Technology Watch",
-        title: "Emerging Defense Technologies",
-        items: [
-          {
-            icon: "🤖",
-            title: "Artificial Intelligence",
-            text: "AI-enabled decision support, intelligence processing, target recognition, autonomy, and human-machine teaming.",
-          },
-          {
-            icon: "🛸",
-            title: "Drones and Autonomous Systems",
-            text: "Unmanned aerial systems, loitering munitions, drone swarms, counter-UAS technologies, and autonomous platforms.",
-          },
-          {
-            icon: "📶",
-            title: "Radar and Sensors",
-            text: "Surveillance systems, radar signatures, sensor fusion, electronic support measures, and detection networks.",
-          },
-          {
-            icon: "⚡",
-            title: "Electronic Warfare",
-            text: "Jamming, spoofing, spectrum dominance, SIGINT, cyber-electromagnetic activities, and electromagnetic operations.",
-          },
-          {
-            icon: "🎧",
-            title: "Acoustic Warfare",
-            text: "Underwater acoustics, sonar systems, passive and active detection, acoustic intelligence, anti-submarine warfare, and maritime acoustic sensing.",
-          },
-          {
-            icon: "🛡️",
-            title: "Cyber Warfare",
-            text: "Cyber operations, network defense, offensive cyber capabilities, critical infrastructure protection, and the cyber dimension of modern conflict.",
-          },
-        ],
-      },
-
-      sources: {
-        eyebrow: "Sources",
-        title: "Useful Defense and Intelligence Links",
-      },
-
-      about: {
-        eyebrow: "About",
-        title: "Modern conflict explained through intelligence and technology.",
-        text: "War Affairs Today is designed as a visual briefing hub for operational intelligence, defense innovation, armed conflict news, and contemporary warfare analysis, with special attention to drones, sensors, radar, electronic warfare, acoustic warfare, cyber warfare, artificial intelligence, autonomous systems, and the legal dimensions of armed conflict.",
-      },
-    },
-
+  const t = {
     pt: {
       nav: {
         conflicts: "Conflitos",
@@ -193,7 +277,6 @@ function App() {
         sources: "Fontes",
         about: "Sobre",
       },
-
       hero: {
         eyebrow: "Inteligência Operacional • Tecnologia de Defesa • Guerra Moderna",
         title: "War Affairs Today",
@@ -201,10 +284,7 @@ function App() {
           "Uma plataforma visual de briefings de inteligência voltada para conflitos modernos, tecnologias emergentes de defesa, notícias sobre conflitos armados e análise operacional.",
         primary: "Ver Boletim",
         secondary: "Tecnologias de Defesa",
-        radarTitle: "Monitor de Inteligência",
-        radarText: "Acompanhando conflitos, tecnologia de defesa e tendências operacionais",
       },
-
       stats: [
         ["24/7", "Mentalidade de monitoramento"],
         ["OSINT", "Análise de fontes abertas"],
@@ -214,7 +294,6 @@ function App() {
         ["G Ciber", "Guerra cibernética"],
         ["AUTO", "Sistemas autônomos"],
       ],
-
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
         title: "Atualizações sobre Conflitos em Andamento",
@@ -223,141 +302,135 @@ function App() {
         expandLabel: "Clique para expandir",
         collapseLabel: "Clique para recolher",
         referencesLabel: "Referências",
-        items: [
-          {
-            tag: "Notícias Recentes",
-            title: "Notícias Recentes sobre Conflitos Armados",
-            references: selectedBulletin.references,
-            text: "Panorama consolidado dos principais acontecimentos recentes em conflitos armados, incluindo eventos no campo de batalha, negociações de cessar-fogo, padrões de escalada e focos de violência.",
-            featured: true,
-            details: [
-              "Acordo EUA-Irã: os Estados Unidos e o Irã alcançaram a estrutura de um memorando de entendimento para um cessar-fogo de 60 dias com o objetivo de encerrar a Operação Epic Fury. O acordo envolve a reabertura do Estreito de Ormuz sem a cobrança de pedágios iranianos e o eventual levantamento do bloqueio naval americano. No entanto, o debate sobre o desmantelamento das 11 toneladas de combustível nuclear iraniano e seu arsenal de mísseis balísticos foi adiado para negociações futuras. O conflito se destacou por uma taxa historicamente alta de baixas femininas nas forças armadas americanas, que representaram 12% dos feridos e 23% dos mortos em ação.",
-              "Ofensiva Russa na Ucrânia: a Rússia realizou um de seus maiores bombardeios noturnos recentes contra a Ucrânia, disparando 90 mísseis e 600 drones. O ataque teve Kiev como alvo principal, matando ao menos quatro pessoas e destruindo infraestrutura civil e áreas residenciais. Na linha de frente, a cidade de Kostiantynivka foi transformada em uma zona de morte, com a sua população original de 67.000 pessoas reduzida para cerca de 2.000 residentes que estão sendo evacuados em meio aos escombros.",
-              "Guerra Líbano-Israel: apesar de um acordo formal de cessar-fogo assinado em 17 de abril, os combates mortais prosseguem no Líbano. Um recente bombardeio aéreo israelense na vila de Sir al-Gharbiyeh matou 11 pessoas, incluindo seis mulheres e uma criança. O Primeiro-Ministro de Israel, Benjamin Netanyahu, declarou que o novo acordo com o Irã não limitará sua liberdade de atacar as forças do Hezbollah.",
-              "Outros focos de violência: no Paquistão, o grupo Exército de Libertação do Balochistão detonou uma bomba que descarrilou um trem de passageiros, matando de 14 a 16 pessoas. No Mali, o grupo afiliado à Al-Qaeda, JNIM, invadiu a capital Bamako usando como modelo as táticas adotadas na guerra da Síria.",
-            ],
-          },
-          {
-            tag: "Inteligência Operacional",
-            title: "Inteligência Operacional",
-            references: selectedBulletin.references,
-            text: "Análise operacional de campanhas, movimentações de forças, desempenho de defesa aérea, bloqueios navais, guerra eletrônica, drones, sensores, operações cibernéticas e sistemas autônomos.",
-            details: [
-              "Desempenho da defesa ucraniana: durante o último ataque em massa da Rússia, as defesas aéreas da Ucrânia conseguiram abater a grande maioria dos drones e mísseis de cruzeiro, mas enfrentaram sérias dificuldades contra mísseis mais rápidos, interceptando apenas 11 dos 33 mísseis balísticos lançados. Na linha de contato, a 28ª Brigada de Infantaria Mecanizada da Ucrânia neutraliza sozinha cerca de 150 drones russos todos os dias.",
-              "Operações no Oriente Médio: os militares americanos mantêm um severo bloqueio naval aos portos iranianos, que Trump afirmou que continuará em força e efeito total até a assinatura do acordo final. Em resposta, as frentes de batalha avançaram para as próprias bases logísticas dos EUA através de constantes ataques iranianos de drones suicidas, incluindo um bombardeio recente que matou militares americanos em uma base no Kuwait.",
-              "Posicionamento da OTAN no Báltico: no sul da Estônia, tropas britânicas da brigada Black Rats executam exercícios militares ostensivos e estão fortificando a fronteira com a Rússia utilizando valas antitanque e obstáculos chamados dentes de dragão. Para escapar da forte vigilância russa de drones, soldados da OTAN em missões secretas estão se disfarçando de operários de construção civil.",
-              "Armamento hipersônico: a Rússia empregou pela terceira vez o míssil balístico de alcance intermediário Oreshnik. Este projétil foi projetado para contornar baterias de defesa aérea como o Patriot, pois atinge velocidades hipersônicas de até 13.000 km/h e libera múltiplas ogivas ao longo de uma trajetória de mergulho extremamente íngreme. A vulnerabilidade da Ucrânia a esses ataques foi exacerbada porque os EUA esgotaram os estoques globais de interceptadores Patriot na sua guerra com o Irã.",
-              "Sistemas autônomos e drones na Ucrânia: mais de 1.000 drones russos sobrevoam diariamente os céus de Kostiantynivka. Em resposta a essa superioridade numérica, os ucranianos adotaram uma gamificação da guerra. Operadores de drones agora pontuam ao aniquilar infantaria e veículos russos, utilizando esses pontos para adquirir os melhores equipamentos disponíveis no mercado bélico online Brave1.",
-              "Guerra eletrônica extrema: um jato da Força Aérea Real Britânica, transportando o secretário de defesa britânico, sofreu interferência russa que bloqueou completamente seus sinais de navegação GPS enquanto sobrevoava os arredores da Estônia. As tropas terrestres ocidentais tentam contornar a guerra eletrônica inimiga usando caixas de cigarro adaptadas que emitem bipes ao detectar frequências de drones e treinando com novos drones kamikazes desenhados especificamente para resistir a esse tipo de interferência.",
-              "Vulnerabilidades cibernéticas e inteligência artificial: operações de influência russas, batizadas de Matryoshka, hackearam dezenas de contas autênticas de usuários em plataformas sociais para disseminar desinformação gerada por IA sobre o conflito ucraniano. Simultaneamente, especialistas alertaram que salvaguardas nos grandes modelos de IA podem ser facilmente burladas com o uso de poesia, instruindo os robôs a ignorarem bloqueios de segurança e a revelarem informações letais.",
-            ],
-          },
-          {
-            tag: "Perspectivas Futuras",
-            title: "Perspectivas Futuras",
-            references: selectedBulletin.references,
-            text: "Avaliação das implicações futuras para escalada regional, alianças, logística, cadeias de suprimento, dissuasão e tomada de decisão estratégica.",
-            details: [
-              "Gargalos econômicos e logísticos globais: o fechamento do Estreito de Ormuz pelo Irã provocou uma grave crise global. Na Ásia Oriental, países como Japão e Coreia do Sul sofrem com um severo desabastecimento de nafta, fundamental para a produção industrial e de embalagens, forçando empresas a alterar designs de produtos e racionar suprimentos básicos.",
-              "Pressão política interna nos EUA: a decisão de buscar a paz com o Irã causou uma ruptura dentro do partido de Donald Trump. Políticos como Ted Cruz, Lindsey Graham e Marco Rubio criticam a postura da administração, argumentando que o acordo é um erro desastroso que permite ao Irã manter o poder, consolidar seu financiamento e sair vitorioso diplomaticamente.",
-              "Rearranjo de alianças e preocupações na Europa: um relatório do Reino Unido advertiu que as cadeias de suprimentos britânicas estão completamente despreparadas para a hipótese de uma guerra com a Rússia. Como os EUA têm procurado transferir o fardo da defesa para a Europa, espera-se que o governo britânico aprove um aumento urgente de £18 bilhões em gastos de defesa. Em outro vetor diplomático estratégico, o distanciamento dos EUA forçou a Índia a tentar apaziguar as tensões com a China, seu rival regional histórico.",
-              "Reorientação estratégica: o afastamento relativo dos EUA em determinados compromissos de segurança pode obrigar atores regionais a recalibrar alianças diplomáticas, militares e econômicas.",
-              "Aceleração tecnológica: drones, inteligência artificial, guerra eletrônica, capacidades cibernéticas, sistemas hipersônicos e plataformas autônomas tendem a ganhar ainda mais centralidade nos conflitos futuros.",
-            ],
-          },
-          {
-            tag: "Direito Internacional",
-            title: "O Direito e os Conflitos Armados",
-            references: selectedBulletin.references,
-            text: "Análise jurídica dos conflitos armados, incluindo Direito Internacional Humanitário, regras de engajamento, proteção de civis, proporcionalidade, responsabilização e tecnologias emergentes.",
-            details: [
-              "Direito Internacional Humanitário: a análise dos conflitos deve considerar os princípios da distinção, proporcionalidade, necessidade militar e precaução nos ataques.",
-              "Proteção de civis: ataques contra áreas urbanas, infraestrutura crítica, zonas residenciais e alvos de duplo uso levantam questões recorrentes sobre danos civis e legalidade operacional.",
-              "Responsabilização: o acompanhamento de possíveis violações do Direito Internacional Humanitário, crimes de guerra, ataques indiscriminados e responsabilidade de comando permanece essencial para a análise dos conflitos.",
-              "Tecnologias emergentes: drones, inteligência artificial, operações cibernéticas, guerra eletrônica, sistemas autônomos e armas hipersônicas desafiam os marcos jurídicos existentes e as regras de engajamento.",
-              "Interface jurídico-operacional: a guerra moderna exige uma avaliação integrada entre necessidade tática, efeitos estratégicos, restrições legais e riscos tecnológicos.",
-            ],
-          },
-        ],
+        items: selectedBulletin.items.pt,
       },
-
       technology: {
         eyebrow: "Observatório Tecnológico",
         title: "Tecnologias Emergentes de Defesa",
         items: [
           {
-            icon: "🤖",
             title: "Inteligência Artificial",
             text: "Apoio à decisão baseado em IA, processamento de inteligência, reconhecimento de alvos, autonomia e cooperação homem-máquina.",
           },
           {
-            icon: "🛸",
             title: "Drones e Sistemas Autônomos",
             text: "Sistemas aéreos não tripulados, munições vagantes, enxames de drones, tecnologias contra-UAS e plataformas autônomas.",
           },
           {
-            icon: "📶",
             title: "Radar e Sensores",
             text: "Sistemas de vigilância, assinaturas radar, fusão de sensores, medidas de apoio à guerra eletrônica e redes de detecção.",
           },
           {
-            icon: "⚡",
             title: "Guerra Eletrônica",
             text: "Jamming, spoofing, domínio do espectro, SIGINT, atividades cibernético-eletromagnéticas e operações no espectro eletromagnético.",
           },
           {
-            icon: "🎧",
             title: "Guerra Acústica",
             text: "Acústica submarina, sistemas sonar, detecção passiva e ativa, inteligência acústica, guerra antissubmarino e sensoriamento acústico marítimo.",
           },
           {
-            icon: "🛡️",
             title: "Guerra Cibernética",
             text: "Operações cibernéticas, defesa de redes, capacidades ofensivas no ciberespaço, proteção de infraestruturas críticas e dimensão cibernética dos conflitos modernos.",
           },
         ],
       },
-
       sources: {
         eyebrow: "Fontes",
         title: "Links Úteis de Defesa e Inteligência",
       },
-
       about: {
         eyebrow: "Sobre",
         title: "Conflitos modernos explicados por meio de inteligência e tecnologia.",
         text: "War Affairs Today foi concebido como um hub visual de briefings para inteligência operacional, inovação em defesa, notícias sobre conflitos armados e análise da guerra contemporânea, com atenção especial a drones, sensores, radar, guerra eletrônica, guerra acústica, guerra cibernética, inteligência artificial, sistemas autônomos e dimensões jurídicas dos conflitos armados.",
       },
     },
-  };
 
-  const t = content[lang];
+    en: {
+      nav: {
+        conflicts: "Conflicts",
+        technology: "Technology",
+        sources: "Sources",
+        about: "About",
+      },
+      hero: {
+        eyebrow: "Operational Intelligence • Defense Technology • Modern Warfare",
+        title: "War Affairs Today",
+        subtitle:
+          "A visual intelligence briefing platform focused on modern conflicts, emerging defense technologies, armed conflict news, and operational analysis.",
+        primary: "View Bulletin",
+        secondary: "Technology Watch",
+      },
+      stats: [
+        ["24/7", "Monitoring mindset"],
+        ["OSINT", "Open-source analysis"],
+        ["AI", "Technology watch"],
+        ["EW", "Electronic warfare focus"],
+        ["AW", "Acoustic warfare"],
+        ["Cyber", "Cyber warfare"],
+        ["AUTO", "Autonomous systems"],
+      ],
+      conflicts: {
+        eyebrow: "Armed Conflict News",
+        title: "Updates on Ongoing Conflicts",
+        bulletin: selectedBulletin.bulletinEn,
+        daySelectorLabel: "Select bulletin date",
+        expandLabel: "Click to expand",
+        collapseLabel: "Click to collapse",
+        referencesLabel: "References",
+        items: selectedBulletin.items.en,
+      },
+      technology: {
+        eyebrow: "Technology Watch",
+        title: "Emerging Defense Technologies",
+        items: [
+          {
+            title: "Artificial Intelligence",
+            text: "AI-enabled decision support, intelligence processing, target recognition, autonomy, and human-machine teaming.",
+          },
+          {
+            title: "Drones and Autonomous Systems",
+            text: "Unmanned aerial systems, loitering munitions, drone swarms, counter-UAS technologies, and autonomous platforms.",
+          },
+          {
+            title: "Radar and Sensors",
+            text: "Surveillance systems, radar signatures, sensor fusion, electronic support measures, and detection networks.",
+          },
+          {
+            title: "Electronic Warfare",
+            text: "Jamming, spoofing, spectrum dominance, SIGINT, cyber-electromagnetic activities, and electromagnetic operations.",
+          },
+          {
+            title: "Acoustic Warfare",
+            text: "Underwater acoustics, sonar systems, passive and active detection, acoustic intelligence, anti-submarine warfare, and maritime acoustic sensing.",
+          },
+          {
+            title: "Cyber Warfare",
+            text: "Cyber operations, network defense, offensive cyber capabilities, critical infrastructure protection, and the cyber dimension of modern conflict.",
+          },
+        ],
+      },
+      sources: {
+        eyebrow: "Sources",
+        title: "Useful Defense and Intelligence Links",
+      },
+      about: {
+        eyebrow: "About",
+        title: "Modern conflict explained through intelligence and technology.",
+        text: "War Affairs Today is designed as a visual briefing hub for operational intelligence, defense innovation, armed conflict news, and contemporary warfare analysis, with special attention to drones, sensors, radar, electronic warfare, acoustic warfare, cyber warfare, artificial intelligence, autonomous systems, and the legal dimensions of armed conflict.",
+      },
+    },
+  }[lang];
 
   const links = [
     {
       label: lang === "en" ? "My GitHub Projects" : "Meus Projetos no GitHub",
       url: "https://github.com/albuca09?tab=repositories",
     },
-    {
-      label: "NATO",
-      url: "https://www.nato.int/",
-    },
-    {
-      label: "U.S. Department of Defense",
-      url: "https://www.defense.gov/",
-    },
-    {
-      label: "IISS",
-      url: "https://www.iiss.org/",
-    },
-    {
-      label: "Janes",
-      url: "https://www.janes.com/",
-    },
-    {
-      label: "CSIS",
-      url: "https://www.csis.org/",
-    },
+    { label: "NATO", url: "https://www.nato.int/" },
+    { label: "U.S. Department of Defense", url: "https://www.defense.gov/" },
+    { label: "IISS", url: "https://www.iiss.org/" },
+    { label: "Janes", url: "https://www.janes.com/" },
+    { label: "CSIS", url: "https://www.csis.org/" },
     {
       label: "Institute for the Study of War",
       url: "https://www.understandingwar.org/",
@@ -386,12 +459,10 @@ function App() {
         </div>
       </nav>
 
-      <section className="hero">
+      <section className="hero hero-clean">
         <div className="hero-content">
           <p className="eyebrow">{t.hero.eyebrow}</p>
-
           <h1>{t.hero.title}</h1>
-
           <p className="subtitle">{t.hero.subtitle}</p>
 
           <div className="hero-buttons">
@@ -403,15 +474,6 @@ function App() {
               {t.hero.secondary}
             </a>
           </div>
-        </div>
-
-        <div className="radar-panel">
-          <div className="radar-circle">
-            <div className="radar-line"></div>
-          </div>
-
-          <p>{t.hero.radarTitle}</p>
-          <span>{t.hero.radarText}</span>
         </div>
       </section>
 
@@ -486,11 +548,11 @@ function App() {
 
                 {isExpanded && (
                   <div className="expanded-content">
-                    {item.references && (
+                    {selectedBulletin.references && (
                       <div className="section-references">
                         <strong>{t.conflicts.referencesLabel}:</strong>
                         <ul>
-                          {item.references.map((reference) => (
+                          {selectedBulletin.references.map((reference) => (
                             <li key={reference.label}>
                               <a
                                 href={reference.url}
@@ -529,7 +591,6 @@ function App() {
         <div className="card-grid">
           {t.technology.items.map((item) => (
             <article className="card" key={item.title}>
-              <div className="icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.text}</p>
             </article>
