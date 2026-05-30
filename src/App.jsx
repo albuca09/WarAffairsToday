@@ -1,16 +1,30 @@
 import { useState } from "react";
 import "./App.css";
 
-const bulletinReferences = [
-  "Financial Times — 25.05.2026",
-  "The Guardian — 25.05.2026",
-  "The New York Times — 25.05.2026",
-  "The Times — 25.05.2026",
-  "The Washington Post — 25.05.2026",
+const bulletins = [
+  {
+    id: "2026-05-25",
+    labelPt: "25 de maio de 2026",
+    labelEn: "May 25, 2026",
+    bulletinPt: "BOLETIM N° 01 — DIA 25 DE MAIO DE 2026",
+    bulletinEn: "BULLETIN No. 01 — MAY 25, 2026",
+    references: [
+      "Financial Times — 25.05.2026",
+      "The Guardian — 25.05.2026",
+      "The New York Times — 25.05.2026",
+      "The Times — 25.05.2026",
+      "The Washington Post — 25.05.2026",
+    ],
+  },
 ];
 
 function App() {
   const [lang, setLang] = useState("pt");
+  const [selectedDay, setSelectedDay] = useState("2026-05-25");
+  const [expandedConflict, setExpandedConflict] = useState(null);
+
+  const selectedBulletin =
+    bulletins.find((bulletin) => bulletin.id === selectedDay) || bulletins[0];
 
   const content = {
     en: {
@@ -45,13 +59,16 @@ function App() {
       conflicts: {
         eyebrow: "Armed Conflict News",
         title: "Updates on Ongoing Conflicts",
-        bulletin: "BULLETIN No. 01 — MAY 25, 2026",
+        bulletin: selectedBulletin.bulletinEn,
+        daySelectorLabel: "Select bulletin date",
+        expandLabel: "Click to expand",
+        collapseLabel: "Click to collapse",
         referencesLabel: "References",
         items: [
           {
             tag: "Conflict Monitoring",
             title: "Battlefield Developments",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Follow major developments in ongoing armed conflicts, including military operations, territorial changes, escalation patterns, ceasefire negotiations, and battlefield-relevant events.",
             featured: true,
             details: [
@@ -64,7 +81,7 @@ function App() {
           {
             tag: "Operational View",
             title: "Military Operations",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Track campaigns, force movements, strikes, defensive actions, maritime operations, air activity, and changes in operational tempo.",
             details: [
               "Ukrainian Air Defense Performance: during the latest Russian mass attack, Ukrainian air defenses intercepted most drones and cruise missiles but faced greater difficulty against faster ballistic missiles.",
@@ -75,7 +92,7 @@ function App() {
           {
             tag: "Strategic Context",
             title: "Escalation Dynamics",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Understand how local events may affect regional security, deterrence, alliances, logistics, and strategic decision-making.",
             details: [
               "Global Economic and Logistical Bottlenecks: the closure of the Strait of Hormuz by Iran triggered a global crisis, affecting industrial supply chains in East Asia, especially those dependent on naphtha.",
@@ -86,7 +103,7 @@ function App() {
           {
             tag: "International Law",
             title: "International Law and Armed Conflict",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Analyze the legal dimensions of armed conflicts, including international humanitarian law, rules of engagement, civilian protection, proportionality, accountability, and the use of emerging technologies in warfare.",
             details: [
               "Legal Assessment of Military Operations: analysis of proportionality, distinction, military necessity, and civilian protection in attacks against urban areas, critical infrastructure, and dual-use targets.",
@@ -97,7 +114,7 @@ function App() {
           {
             tag: "Technology in War",
             title: "Weapons and Systems",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Observe the role of drones, missiles, air defense, electronic warfare, cyber operations, sensors, acoustic systems, and autonomous systems in current conflicts.",
             details: [
               "Hypersonic Weapons: Russia reportedly used the Oreshnik intermediate-range ballistic missile, designed to evade air-defense systems and reach hypersonic speeds with multiple warheads.",
@@ -190,13 +207,16 @@ function App() {
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
         title: "Atualizações sobre Conflitos em Andamento",
-        bulletin: "BOLETIM N° 01 — DIA 25 DE MAIO DE 2026",
+        bulletin: selectedBulletin.bulletinPt,
+        daySelectorLabel: "Selecionar dia do boletim",
+        expandLabel: "Clique para expandir",
+        collapseLabel: "Clique para recolher",
         referencesLabel: "Referências",
         items: [
           {
             tag: "Monitoramento de Conflitos",
             title: "Desenvolvimentos no Campo de Batalha",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Acompanhe os principais acontecimentos em conflitos armados em andamento, incluindo operações militares, mudanças territoriais, padrões de escalada, negociações de cessar-fogo e eventos relevantes no campo de batalha.",
             featured: true,
             details: [
@@ -209,7 +229,7 @@ function App() {
           {
             tag: "Visão Operacional",
             title: "Operações Militares",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Acompanhe campanhas, movimentações de forças, ataques, ações defensivas, operações marítimas, atividade aérea e mudanças no ritmo operacional.",
             details: [
               "Desempenho da defesa ucraniana: durante o último ataque em massa da Rússia, as defesas aéreas da Ucrânia conseguiram abater a grande maioria dos drones e mísseis de cruzeiro, mas enfrentaram sérias dificuldades contra mísseis mais rápidos, interceptando apenas 11 dos 33 mísseis balísticos lançados. Na linha de contato, a 28ª Brigada de Infantaria Mecanizada da Ucrânia neutraliza sozinha cerca de 150 drones russos todos os dias.",
@@ -220,7 +240,7 @@ function App() {
           {
             tag: "Contexto Estratégico",
             title: "Dinâmicas de Escalada",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Entenda como eventos locais podem afetar a segurança regional, a dissuasão, alianças, logística e processos de decisão estratégica.",
             details: [
               "Gargalos econômicos e logísticos globais: o fechamento do Estreito de Ormuz pelo Irã provocou uma grave crise global. Na Ásia Oriental, países como Japão e Coreia do Sul sofrem com um severo desabastecimento de nafta, fundamental para a produção industrial e de embalagens, forçando empresas a alterar designs de produtos e racionar suprimentos básicos.",
@@ -231,7 +251,7 @@ function App() {
           {
             tag: "Direito Internacional",
             title: "Direito Internacional e Conflitos Armados",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Analise as dimensões jurídicas dos conflitos armados, incluindo Direito Internacional Humanitário, regras de engajamento, proteção de civis, proporcionalidade, responsabilização e uso de tecnologias emergentes na guerra.",
             details: [
               "Avaliação jurídica de operações militares: análise de proporcionalidade, distinção, necessidade militar e proteção de civis em ataques contra áreas urbanas, infraestrutura crítica e alvos de duplo uso.",
@@ -242,7 +262,7 @@ function App() {
           {
             tag: "Tecnologia na Guerra",
             title: "Armas e Sistemas",
-            references: bulletinReferences,
+            references: selectedBulletin.references,
             text: "Observe o papel de drones, mísseis, defesa aérea, guerra eletrônica, operações cibernéticas, sensores, sistemas acústicos e sistemas autônomos nos conflitos atuais.",
             details: [
               "Armamento hipersônico: a Rússia empregou pela terceira vez o míssil balístico de alcance intermediário Oreshnik. Este projétil foi projetado para contornar baterias de defesa aérea como o Patriot, pois atinge velocidades hipersônicas de até 13.000 km/h e libera múltiplas ogivas ao longo de uma trajetória de mergulho extremamente íngreme. A vulnerabilidade da Ucrânia a esses ataques foi exacerbada porque os EUA esgotaram os estoques globais de interceptadores Patriot na sua guerra com o Irã.",
@@ -402,46 +422,86 @@ function App() {
           <p className="eyebrow">{t.conflicts.eyebrow}</p>
           <h2>{t.conflicts.title}</h2>
 
-          {t.conflicts.bulletin && (
+          <div className="bulletin-toolbar">
             <p className="bulletin-label">{t.conflicts.bulletin}</p>
-          )}
+
+            <label className="day-selector">
+              <span>{t.conflicts.daySelectorLabel}</span>
+
+              <select
+                value={selectedDay}
+                onChange={(event) => {
+                  setSelectedDay(event.target.value);
+                  setExpandedConflict(null);
+                }}
+              >
+                {bulletins.map((bulletin) => (
+                  <option value={bulletin.id} key={bulletin.id}>
+                    {lang === "pt" ? bulletin.labelPt : bulletin.labelEn}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
         </div>
 
         <div className="conflict-grid">
-          {t.conflicts.items.map((item) => (
-            <article
-              className={
-                item.featured
-                  ? "conflict-card featured-conflict"
-                  : "conflict-card"
-              }
-              key={item.title}
-            >
-              <span className="tag">{item.tag}</span>
-              <h3>{item.title}</h3>
+          {t.conflicts.items.map((item) => {
+            const isExpanded = expandedConflict === item.title;
 
-              {item.references && (
-                <div className="section-references">
-                  <strong>{t.conflicts.referencesLabel}:</strong>
-                  <ul>
-                    {item.references.map((reference) => (
-                      <li key={reference}>{reference}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+            return (
+              <article
+                className={
+                  isExpanded
+                    ? "conflict-card expanded-conflict"
+                    : item.featured
+                    ? "conflict-card featured-conflict"
+                    : "conflict-card"
+                }
+                key={item.title}
+              >
+                <button
+                  className="conflict-toggle"
+                  onClick={() =>
+                    setExpandedConflict(isExpanded ? null : item.title)
+                  }
+                >
+                  <span className="tag">{item.tag}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
 
-              <p>{item.text}</p>
+                  <span className="expand-hint">
+                    {isExpanded
+                      ? t.conflicts.collapseLabel
+                      : t.conflicts.expandLabel}
+                  </span>
+                </button>
 
-              {item.details && (
-                <ul className="detail-list">
-                  {item.details.map((detail) => (
-                    <li key={detail}>{detail}</li>
-                  ))}
-                </ul>
-              )}
-            </article>
-          ))}
+                {isExpanded && (
+                  <div className="expanded-content">
+                    {item.references && (
+                      <div className="section-references">
+                        <strong>{t.conflicts.referencesLabel}:</strong>
+                        <ul>
+                          {item.references.map((reference) => (
+                            <li key={reference}>{reference}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {item.details && (
+                      <ul className="detail-list">
+                        {item.details.map((detail) => (
+                          <li key={detail}>{detail}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 
