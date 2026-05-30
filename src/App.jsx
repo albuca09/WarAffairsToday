@@ -274,13 +274,12 @@ function App() {
         secondary: "Tecnologias de Defesa",
       },
       stats: [
-        ["24/7", "Mentalidade de monitoramento"],
-        ["OSINT", "Análise de fontes abertas"],
-        ["IA", "Observação tecnológica"],
-        ["GE", "Foco em guerra eletrônica"],
+        ["OSINT", "Análise de Fontes Abertas"],
+        ["IA", "Inteligência Artificial"],
+        ["GE", "Guerra Eletrônica"],
         ["GA", "Guerra acústica"],
         ["G Ciber", "Guerra cibernética"],
-        ["AUTO", "Sistemas autônomos"],
+        ["AUTO", "Sistemas Autônomos"],
       ],
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
