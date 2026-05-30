@@ -347,10 +347,9 @@ function App() {
         secondary: "Technology Watch",
       },
       stats: [
-        ["24/7", "Monitoring mindset"],
-        ["OSINT", "Open-source analysis"],
-        ["AI", "Technology watch"],
-        ["EW", "Electronic warfare focus"],
+        ["OSINT", "Open-source Analysis"],
+        ["AI", "Technology Watch"],
+        ["EW", "Electronic warfare"],
         ["AW", "Acoustic warfare"],
         ["Cyber", "Cyber warfare"],
         ["AUTO", "Autonomous systems"],
