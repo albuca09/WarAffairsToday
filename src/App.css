@@ -391,6 +391,8 @@ h1 {
 .conflict-toggle p {
   color: #aeb9ca;
   line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .tag {
@@ -468,6 +470,18 @@ h1 {
   color: #6ee7b7;
 }
 
+.section-references a {
+  color: #d7e2f2;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(110, 231, 183, 0.45);
+  transition: 0.25s;
+}
+
+.section-references a:hover {
+  color: #6ee7b7;
+  border-bottom-color: #6ee7b7;
+}
+
 .detail-list {
   margin: 18px 0 0;
   padding-left: 18px;
@@ -478,6 +492,8 @@ h1 {
   line-height: 1.65;
   margin-bottom: 12px;
   font-size: 0.92rem;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .detail-list li::marker {

@@ -9,11 +9,26 @@ const bulletins = [
     bulletinPt: "BOLETIM N° 01 — DIA 25 DE MAIO DE 2026",
     bulletinEn: "BULLETIN No. 01 — MAY 25, 2026",
     references: [
-      "Financial Times — 25.05.2026",
-      "The Guardian — 25.05.2026",
-      "The New York Times — 25.05.2026",
-      "The Times — 25.05.2026",
-      "The Washington Post — 25.05.2026",
+      {
+        label: "Financial Times — 25.05.2026",
+        url: "https://www.ft.com/",
+      },
+      {
+        label: "The Guardian — 25.05.2026",
+        url: "https://www.theguardian.com/",
+      },
+      {
+        label: "The New York Times — 25.05.2026",
+        url: "https://www.nytimes.com/",
+      },
+      {
+        label: "The Times — 25.05.2026",
+        url: "https://www.thetimes.com/",
+      },
+      {
+        label: "The Washington Post — 25.05.2026",
+        url: "https://www.washingtonpost.com/",
+      },
     ],
   },
 ];
@@ -484,7 +499,15 @@ function App() {
                         <strong>{t.conflicts.referencesLabel}:</strong>
                         <ul>
                           {item.references.map((reference) => (
-                            <li key={reference}>{reference}</li>
+                            <li key={reference.label}>
+                              <a
+                                href={reference.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {reference.label}
+                              </a>
+                            </li>
                           ))}
                         </ul>
                       </div>
