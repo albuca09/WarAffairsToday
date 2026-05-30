@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import WorldConflictMap from "./WorldConflictMap";
 
 const bulletins = [
   {
@@ -112,7 +113,6 @@ const bulletins = [
       ],
     },
   },
-
   {
     id: "2026-05-30",
     labelPt: "30 de maio de 2026",
@@ -274,12 +274,13 @@ function App() {
         secondary: "Tecnologias de Defesa",
       },
       stats: [
-        ["OSINT", "Análise de Fontes Abertas"],
-        ["IA", "Inteligência Artificial"],
-        ["GE", "Guerra Eletrônica"],
+        ["24/7", "Mentalidade de monitoramento"],
+        ["OSINT", "Análise de fontes abertas"],
+        ["IA", "Observação tecnológica"],
+        ["GE", "Foco em guerra eletrônica"],
         ["GA", "Guerra acústica"],
         ["G Ciber", "Guerra cibernética"],
-        ["AUTO", "Sistemas Autônomos"],
+        ["AUTO", "Sistemas autônomos"],
       ],
       conflicts: {
         eyebrow: "Notícias sobre Conflitos Armados",
@@ -331,7 +332,6 @@ function App() {
         text: "War Affairs Today foi concebido como um hub visual de briefings para inteligência operacional, inovação em defesa, notícias sobre conflitos armados e análise da guerra contemporânea, com atenção especial a drones, sensores, radar, guerra eletrônica, guerra acústica, guerra cibernética, inteligência artificial, sistemas autônomos e dimensões jurídicas dos conflitos armados.",
       },
     },
-
     en: {
       nav: {
         conflicts: "Conflicts",
@@ -500,6 +500,8 @@ function App() {
             </label>
           </div>
         </div>
+
+        <WorldConflictMap lang={lang} selectedDay={selectedDay} />
 
         <div className="conflict-grid compact-conflict-grid">
           {t.conflicts.items.map((item) => {
