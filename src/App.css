@@ -723,3 +723,27 @@ h1 {
     padding: 22px;
   }
 }
+/* AJUSTE DO RESUMO DO PAÍS SELECIONADO */
+
+.country-news-summary {
+  color: #d7e2f2;
+  line-height: 1.72;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  margin: 0 0 18px;
+}
+
+.country-news-section-title {
+  display: block;
+  margin: 18px 0 8px;
+  color: #6ee7b7;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.country-news-panel {
+  text-align: left;
+}
