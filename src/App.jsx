@@ -129,39 +129,27 @@ const bulletins = [
       },
       {
         label: "Iran war updates — Al Jazeera",
-        url: "https://www.aljazeera.com/news/liveblog/2026/4/4/iran-war-live-tehran-downs-2-us-warplanes-israel-bombs-lebanon-bridges",
+        url: "https://www.aljazeera.com/",
       },
       {
         label: "Iran calls for a new regional security order — Tehran Times",
-        url: "https://www.tehrantimes.com/news/526850/Iran-calls-for-a-new-regional-security-order",
+        url: "https://www.tehrantimes.com/",
       },
       {
         label: "Analysis: The war on Iran is at a crossroads — Al Jazeera",
-        url: "https://www.aljazeera.com/news/2026/3/12/analysis-the-war-on-iran-is-at-a-crossroads",
+        url: "https://www.aljazeera.com/",
       },
       {
         label: "Can NATO survive if Trump pulls the US out? — Al Jazeera",
-        url: "https://www.aljazeera.com/news/2026/4/10/closer-to-a-break-than-ever-can-nato-survive-if-trump-pulls-the-us-out",
+        url: "https://www.aljazeera.com/",
       },
       {
         label: "Two years into Sudan's war — Al Jazeera Interactives",
-        url: "https://interactive.aljazeera.com/aje/2025/sudan-voices/",
-      },
-      {
-        label: "State of trauma — Al Jazeera",
-        url: "https://www.aljazeera.com/news/2026/5/29/state-of-trauma-israel-wrestles-with-mental-aftershocks-of-war",
+        url: "https://interactive.aljazeera.com/",
       },
       {
         label: "Mapping the Red Sea attacks — Al Jazeera Interactives",
-        url: "https://interactive.aljazeera.com/aje/2024/mapping-red-sea-shipping-attacks/",
-      },
-      {
-        label: "BRICS condemns attacks on Iran — Al Jazeera",
-        url: "https://www.aljazeera.com/news/2025/7/7/brics-condemns-attacks-on-iran-gaza-war-trump-tariffs-key-takeaways",
-      },
-      {
-        label: "Israel vague about new diplomatic horizon — Al Jazeera",
-        url: "https://www.aljazeera.com/news/2014/10/12/israel-vague-about-new-diplomatic-horizon",
+        url: "https://interactive.aljazeera.com/",
       },
     ],
     items: {
@@ -218,9 +206,9 @@ const bulletins = [
           text: "A consolidated overview of recent armed conflict developments, focusing on the U.S.–Iran war, the Israel–Lebanon conflict, the Russia–Ukraine war, and Gaza.",
           featured: true,
           details: [
-            "U.S.–Iran War: the United States and Iran are reportedly close to signing a memorandum of understanding for a 60-day ceasefire. The arrangement would require Iran to reopen the Strait of Hormuz without charging tolls, while the United States would allow Iranian assets to be unfrozen. President Donald Trump has not formally approved the final terms, while Iran recently launched a ballistic missile, intercepted, toward Kuwait as a show of force.",
-            "Israel–Lebanon Conflict: Israel intensified its incursion, carrying out airstrikes in the Beirut area for the first time in weeks and heavily bombing Tyre and areas near Beaufort Castle. Israeli forces are reportedly clearing villages to establish an 8-to-10-kilometer buffer zone from the border.",
-            "Russia–Ukraine War: the conflict entered a new phase as Ukraine reportedly broke elements of static positional warfare and conducted tactical incursions beyond Russian front lines. Russia again launched the Oreshnik hypersonic ballistic missile near Bila Tserkva, while Ukraine requested urgent Patriot missile supplies from the United States.",
+            "U.S.–Iran War: the United States and Iran are reportedly close to signing a memorandum of understanding for a 60-day ceasefire. The arrangement would require Iran to reopen the Strait of Hormuz without charging tolls, while the United States would allow Iranian assets to be unfrozen.",
+            "Israel–Lebanon Conflict: Israel intensified its incursion, carrying out airstrikes in the Beirut area and heavily bombing Tyre and areas near Beaufort Castle.",
+            "Russia–Ukraine War: the conflict entered a new phase as Ukraine reportedly broke elements of static positional warfare and conducted tactical incursions beyond Russian front lines.",
             "Gaza: Israel confirmed the death of Mohammed Odeh, recently appointed commander of Hamas's armed wing and former intelligence chief of the group.",
           ],
         },
@@ -229,10 +217,10 @@ const bulletins = [
           title: "Operational Intelligence",
           text: "A multidomain operational intelligence assessment combining military doctrine, network analysis, activity-based intelligence, data automation, and threat evaluation.",
           details: [
-            "Hezbollah drone threat and social network analysis: Hezbollah reportedly adopted tactics from the Ukraine war, including FPV explosive drones and night sensors. Many drones are allegedly controlled through fiber-optic cables, making them highly resistant to jamming. Analysts can use social network analysis and link analysis to identify operators, supply chains, cell leaders, and critical nodes.",
-            "Air defense and hypersonic missiles: Russia's Oreshnik missile reportedly reaches speeds above Mach 10, complicating interception. Analysts may rely on structured analytic techniques, deception detection, and predictive analysis to anticipate launch indicators before interception becomes physically difficult.",
-            "Shadow fleet and activity-based intelligence: Iran reportedly expanded a clandestine tanker fleet to bypass sanctions and naval blockades. Activity-based intelligence can correlate satellite imagery, financial transactions, maritime routes, and ship-to-ship transfers to uncover hidden patterns.",
-            "Data integration and automation: modern intelligence uses AI and machine learning across the TCPED cycle to process big data, automate target recognition, and support predictive analysis, freeing human analysts for critical reasoning and high-value judgment.",
+            "Hezbollah drone threat and social network analysis: Hezbollah reportedly adopted tactics from the Ukraine war, including FPV explosive drones and night sensors.",
+            "Air defense and hypersonic missiles: Russia's Oreshnik missile reportedly reaches speeds above Mach 10, complicating interception.",
+            "Shadow fleet and activity-based intelligence: Iran reportedly expanded a clandestine tanker fleet to bypass sanctions and naval blockades.",
+            "Data integration and automation: modern intelligence uses AI and machine learning across the TCPED cycle to process big data and support predictive analysis.",
           ],
         },
         {
@@ -241,8 +229,8 @@ const bulletins = [
           text: "Assessment of future escalation, alliance shifts, logistical weaknesses, energy security, and military resilience in prolonged conflicts.",
           details: [
             "Escalation risk and alliance shifts: geopolitical competition over the Caucasus is intensifying, with the United States and Russia competing for influence in Armenia.",
-            "Logistical deficiencies: reports indicate that some Western allies may not be prepared to sustain long-duration combat. Fuel shortages, limited specialized personnel, and insufficient guided weapons stocks remain key vulnerabilities.",
-            "Energy supply chains as national security: wars in Iran and Ukraine have turned energy into a strategic weapon. Renewable energy and distributed generation are increasingly viewed as tools of resilience and military independence.",
+            "Logistical deficiencies: reports indicate that some Western allies may not be prepared to sustain long-duration combat.",
+            "Energy supply chains as national security: wars in Iran and Ukraine have turned energy into a strategic weapon.",
           ],
         },
         {
@@ -250,10 +238,10 @@ const bulletins = [
           title: "Law and Armed Conflicts",
           text: "Legal analysis of rules of engagement, prisoner treatment, accountability, and the implications of artificial intelligence in armed conflict.",
           details: [
-            "Legal basis and rules of engagement: military operations and battlefield intelligence collection are governed by the law of armed conflict, international human rights law, and rules of engagement.",
-            "Prisoner treatment and intelligence sharing: interrogations must comply with the Geneva Conventions and protect prisoners from torture and mistreatment. Policies such as the Fulford Principles restrict intelligence sharing when there is a risk of enabling unlawful acts.",
-            "Special forces accountability: ongoing investigations in the United Kingdom examine alleged practices by British Special Forces during the Afghanistan War between 2010 and 2013.",
-            "Emerging technologies and battlefield AI: autonomous weapons and AI-enabled targeting raise major concerns under international law, especially when human control over lethal force is reduced.",
+            "Legal basis and rules of engagement: military operations and battlefield intelligence collection are governed by the law of armed conflict and rules of engagement.",
+            "Prisoner treatment and intelligence sharing: interrogations must comply with the Geneva Conventions and protect prisoners from torture and mistreatment.",
+            "Special forces accountability: ongoing investigations in the United Kingdom examine alleged practices by British Special Forces during the Afghanistan War.",
+            "Emerging technologies and battlefield AI: autonomous weapons and AI-enabled targeting raise major concerns under international law.",
           ],
         },
       ],
@@ -631,3 +619,4 @@ function App() {
 }
 
 export default App;
+)
